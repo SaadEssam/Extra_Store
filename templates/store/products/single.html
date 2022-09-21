@@ -1,4 +1,9 @@
-{% extends '../base.html' %} {% block content %}
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}
+{{ product.title }}
+{% endblock %}
+{% block content %}
 <div class="container">
   <main class="pt-5">
     <div class="row g-3">

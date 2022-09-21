@@ -9,6 +9,11 @@ from store.models import Category, Product
 from store.views import all_products
 
 
+@skip('demonstrating skipping')
+class TestSkip(TestCase):
+  def test_skip_ex(self):
+    pass
+
 class TestViewResponses(TestCase):
   def setUp(self):
     self.c = Client()
@@ -22,7 +27,9 @@ class TestViewResponses(TestCase):
     """
     Test allowed hosts
     """
-    response = self.c.get('/')
+    response = self.c.get('/', HTTP_HOST='nodomain.com')
+    self.assertEqual(response.status_code, 400)
+    response = self.c.get('/', HTTP_HOST='yourdomain.com')
     self.assertEqual(response.status_code, 200)
 
   def test_product_detail_url(self):
@@ -43,16 +50,14 @@ class TestViewResponses(TestCase):
     request = HttpRequest()
     response = all_products(request)
     html = response.content.decode('utf8')
-    print(html)
-    self.assertIn('<title>Home</title>', html)
+    self.assertIn('<title>Extra Store</title>', html)
     self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
     self.assertTrue(response.status_code, 200)
 
   def test_view_function(self):
-    request = self.factory.get('/item/grokking-algorithms')
+    request = self.factory.get('/grokking-algorithms')
     response = all_products(request)
     html = response.content.decode('utf8')
-    print(html)
-    self.assertIn('<title>Home</title>', html)
+    self.assertIn('<title>Extra Store</title>', html)
     self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
     self.assertTrue(response.status_code, 200)
