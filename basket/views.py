@@ -5,7 +5,8 @@ from .basket import Basket
 # Create your views here.
 
 def basket_summary(request):
-  return render(request, 'store/basket/summary.html')
+  basket = Basket(request)
+  return render(request, 'store/basket/summary.html', {'basket': basket})
 
 def basket_add(request):
   basket = Basket(request)
