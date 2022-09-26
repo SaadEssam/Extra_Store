@@ -26,6 +26,7 @@
       {% for product in products %}
       <div class="col">
         <div class="card shadow-sm">
+          <a href="{{ product.get_absolute_url }}">
           <img
             class="img-fluid"
             alt="Responsive image"
