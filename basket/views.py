@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
+from django.shortcuts import render, get_object_or_404
 from store.models import Product
 from .basket import Basket
 # Create your views here.
@@ -18,5 +18,4 @@ def basket_add(request):
     
     basketqty = basket.__len__()
     response = JsonResponse({'qty': basketqty})
-    
     return response
