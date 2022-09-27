@@ -56,4 +56,3 @@ class TestViewResponses(TestCase):
     self.assertIn('<title>Extra Store</title>', html)
     self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
     self.assertTrue(response.status_code, 200)
-
