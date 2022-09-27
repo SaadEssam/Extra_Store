@@ -59,6 +59,7 @@
 </main>
 
 <script>
+//Delete button
   $(document).on('click', '.delete-button', function (e) {
     e.preventDefault();
     var prodid = $(this).data('index');
@@ -76,5 +77,26 @@
       error: function (xhr, errmsg, err) {}
     });
   });
+
+//Update button
+  $(document).on('click', '.update-button', function (e) {
+    e.preventDefault();
+    var prodid = $(this).data('index');
+    $.ajax({
+      type: 'POST',
+      url: '{% url "basket:basket_update" %}',
+      data: {
+        productid: $(this).data('index'),
+        productqty: $('#select'+ prodid +' option:selected').text(),
+        csrfmiddlewaretoken: "{{csrf_token}}",
+        action: "post"
+      },
+      success: function (json) {
+
+      },
+      error: function (xhr, errmsg, err) {}
+    });
+  });
 </script>
 {% endblock %}
+
