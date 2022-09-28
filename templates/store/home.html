@@ -20,35 +20,31 @@
 </section>
 
 <div class="album py-5 bg-light">
-  <div class="container">
-    <div class="pb-3 h5">All Books</div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
-      {% for product in products %}
-      <div class="col">
-        <div class="card shadow-sm">
-          <a href="{{ product.get_absolute_url }}">
-          <img
-            class="img-fluid"
-            alt="Responsive image"
-            src="{{ product.image.url }}"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              <a
-                class="text-dark text-decoration-none"
-                href="{{ product.get_absolute_url }}"
-                >{{ product.title }}</a
-              >
-            </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <small class="text-muted">9min read</small>
+<div class="container">
+  <div class="row">
+    <div class="album py-5">
+      <div class="pb-3">
+        <h1 class="h3">All Books</h1>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+        {% for product in products %}
+        <div class="col">
+          <div class="card border-0">
+            <a href="{{ product.get_absolute_url }}">
+            <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
+            <div class="card-body px-0">
+              <p class="card-text">
+                <a class="text-dark text-decoration-none"
+                  href="{{ product.get_absolute_url }}">{{ product.title|slice:":50" }}...</a>
+              </p>
+              <div class="fw-bold">${{product.price}}</div>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 </div>
-
+</div>
 {% endblock %}
