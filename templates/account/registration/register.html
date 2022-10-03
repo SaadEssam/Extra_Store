@@ -1,6 +1,19 @@
 {% extends '../../store/base.html' %}
 {% block title %}Register{% endblock %}
 {% block content %}
+
+<style>
+  .account-form input {
+    border: 2px solid #ccc;
+    height: clac(2em + .75rem + 2px);
+  }
+
+  .ccount-form input:focus {
+    border-color: #1497ff;
+    box-shadow: none;
+  }
+</style>
+
 <div class="container-fluid">
   <div class="tow no-gutter">
     <div class="col-md-12">
@@ -35,7 +48,7 @@
                 {{ form.password2 }}
                 <button class="btn btn-primary btn-block py-2 mb-4 mt-5 fw500 w-100" type="submit">Register</button>
                 <p class="text-center">
-                  <a href="{% url 'account:login' %}">Already have an account?</a>
+                  <a href="">Already have an account?</a>
                 </p>
               </form>
             </div>
