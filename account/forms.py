@@ -1,7 +1,7 @@
 from codecs import charmap_build
 from django import forms
 from .models import UserBase
-from django.contrib.auth.forms import (AuthenticationForm)
+from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm, SetPasswordForm)
 
 class UserLoginForm(AuthenticationForm):
   username = forms.CharField(widget=forms.TextInput(
@@ -68,3 +68,24 @@ class UserEditForm(forms.ModelForm):
     super().__init__(*args, **kwargs)
     self.fields['first_name'].required = True
     self.fields['email'].required = True
+
+
+class PwdResetForm(PasswordResetForm):
+  email = forms.EmailField(max_length=254, widget=forms.TextInput(
+    attrs={'class': 'form-control mb-3', 'placeholder': 'Email', 'id': 'form-email'}))
+  
+  def clean_email(self):
+    email = self.cleaned_data['email']
+    u = UserBase.objects.filter(email=email)
+    if not u:
+      raise forms.ValidationError('unfortunately we can not find that email address')
+    return email
+
+
+class PwdResetConfirmForm(SetPasswordForm):
+  new_password1: forms.CharField(
+    label='New password', widget=forms.PasswordInput(
+      attrs={'class': 'form-control mb-3', 'placeholder': 'New Password', 'id': 'form-new-pass'}))
+  new_password2: forms.CharField(
+    label='Repeat password', widget=forms.PasswordInput(
+      attrs={'class': 'form-control mb-3', 'placeholder': 'New Password', 'id': 'form-new-pass2'}))
