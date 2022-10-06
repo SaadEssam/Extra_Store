@@ -92,7 +92,7 @@
                   <!-- Payment elements will appear here -->
                 </div>
                 <hr class="my-4">
-                <button id="submit" class="btn btn-primary w-100 fw-bold" data-secret="">Pay</button>
+                <button id="submit" class="btn btn-primary w-100 fw-bold" data-secret="{{ client_secret }}">Pay</button>
               </form>
             </div>
           </div>
@@ -101,5 +101,9 @@
     </div>
   </div>
 </div>
-
+<script>
+  var CSRF_TOKEN = '{{csrf_token}}';
+</script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'payment/index.js' %}" data-rel-js></script>
 {% endblock %}
