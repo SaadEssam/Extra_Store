@@ -1,10 +1,11 @@
-{% extends '../store/base.html' %}
+{% extends "../store/base.html" %}
 {% load static %}
 {% block title %}Payment{% endblock %}
 {% block content %}
 
 <style>
-  .account-form input {
+  .account-form input,
+    {
     border: 2px solid #ccc;
     height: calc(2em + .75rem + 2px);
   }
@@ -25,10 +26,10 @@
       <div class="login d-flex align-items-center py-5">
         <div class="container">
           <div class="row">
-            <div id ="payment-form" class="col-12 col-lg-6 mx-auto">
+            <div id="payment-form" class="col-12 col-lg-6 mx-auto">
               <h3 class="mb-3">Billing address</h3>
-              <!-- Error messages in this element-->
-              <div id="card-errors" class="a" tole="alert"></div>
+              <!-- Error messages in this element -->
+              <div id="card-errors" class="a" role="alert"></div>
               <form>
                 <div class="row g-3">
                   <div class="col-sm-7">
@@ -101,8 +102,9 @@
     </div>
   </div>
 </div>
+
 <script>
-  var CSRF_TOKEN = '{{csrf_token}}';
+  var CSRF_TOKEN = '{{ csrf_token }}';
 </script>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="{% static 'payment/index.js' %}" data-rel-js></script>

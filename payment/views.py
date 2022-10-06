@@ -1,5 +1,8 @@
+import stripe
+
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+
 from basket.basket import Basket
 # Create your views here.
 
@@ -11,7 +14,9 @@ def BasketView(request):
   total = total.replace('.', '')
   total = int(total)
   
-  stripe.api.key = 'pk_test_51LpvHqJsaKztgHd5j9lnHRRlRrcMAW33Hlaost9eZD1ckuXGiiz5ptmN4FPR10fo8I5nCNf7rUHHN6N140qRbor300eT2kbrGS'
+  print('total')
+  
+  stripe.api_key = 'sk_test_51LpvHqJsaKztgHd5Uspc2tJQ1EcUkhGkO7pOnM8RcWiwVRdHBDFAVk6CdT02DROAg463IDV5AR8OrDZDn5SEIPi8003nAdFP67'
   intent = stripe.PaymentIntent.create(
     amount=total,
     currency='usd',
