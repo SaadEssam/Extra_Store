@@ -4,7 +4,7 @@
 {% block content %}
 
 <style>
-  .account-form input,
+  .account-form input
     {
     border: 2px solid #ccc;
     height: calc(2em + .75rem + 2px);
@@ -32,9 +32,9 @@
               <div id="card-errors" class="a" role="alert"></div>
               <form>
                 <div class="row g-3">
-                  <div class="col-sm-7">
+                  <div class="col-12">
                     <label for="firstName" class="form-label">Customer Name</label>
-                    <input type="text" class="form-control" id="custName" placeholder="" required>
+                    <input type="text" class="form-control" id="custName" placeholder="Customer Name" required>
                     <div class="invalid-feedback">
                       Valid first name is required.
                     </div>
@@ -107,5 +107,6 @@
   var CSRF_TOKEN = '{{ csrf_token }}';
 </script>
 <script src="https://js.stripe.com/v3/"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
 <script src="{% static 'payment/index.js' %}" data-rel-js></script>
 {% endblock %}
