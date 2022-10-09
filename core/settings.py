@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-__h2!y)*$-sir7p3*=scu1z6#o$6*02fee-28#*pcawk_(*&@-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['yourdomain.com', '127.0.0.1']
+ALLOWED_HOSTS = ['yourdomain.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -144,3 +144,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Stripe Payment
+PUBLISHABLE_KEY = 'pk_test_51LpvHqJsaKztgHd5j9lnHRRlRrcMAW33Hlaost9eZD1ckuXGiiz5ptmN4FPR10fo8I5nCNf7rUHHN6N140qRbor300eT2kbrGS'
+SECRET_KEY = 'sk_test_51LpvHqJsaKztgHd5Uspc2tJQ1EcUkhGkO7pOnM8RcWiwVRdHBDFAVk6CdT02DROAg463IDV5AR8OrDZDn5SEIPi8003nAdFP67'
+STRIPE_ENDPOINT_SECRET = 'whsec_f3190ee9ccca25ed912818c34f35ede2ab090f30f9248045d7d8abd4b52b523a'
+# stripe listen --forward-to localhost:8000/payment/webhook/

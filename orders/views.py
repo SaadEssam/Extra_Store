@@ -27,3 +27,7 @@ def add(request):
                                   quantity=item['qty'])
     response = JsonResponse({'success': 'Return something'})
     return response
+
+
+def payment_confirmation(data):
+  Order.objects.filter(order_key=data).update(billing_status=True)
