@@ -1,11 +1,11 @@
-{% extends "store/base.html" %}
+{% extends "../base.html" %}
 {% load static %}
 {% block title %}Basket Summary{% endblock %}
 {% block content %}
 
 
 <main class="pt-5">
-  <div class="container" style="max-width: 1000px">
+  <div class="container">
     <div class="col-12">
       <h1 class="h2">Your Basket</h1>
     </div>
@@ -17,6 +17,9 @@
   <div class="container" style="max-width: 1000px">
     
     <div class="row g-3">
+      {% if basket|length == 0 %}
+      <div class="col-12">Your basket is empty <a href="{% url 'store:store_home' %}">Store</a></div>
+      {% else %}
       <div class="col-12 bg-light p-3 d-flex justify-content-between">
         <div class="d-flex d-flex-inline">
           <div class="pe-3">Order</div>
@@ -81,6 +84,7 @@
         {% endwith %} 
         {% endfor %}
       </div>
+      {% endif %}
     </div>
     
   </div>
