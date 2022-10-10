@@ -1,5 +1,4 @@
-{% extends './base.html' %}
-{% load static %}
+{% extends '../base.html' %}
 {% block title %}Extra Store{%endblock %}
 {% block content %}
 
@@ -26,7 +25,10 @@
       <div class="pb-3">
         <h1 class="h3">All Books</h1>
       </div>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+      {% if not products %}
+      <div class="col-12">There are currently no products active</div>
+        {% else %}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
         {% for product in products %}
         <div class="col">
           <div class="card border-0">
@@ -42,7 +44,8 @@
           </div>
         </div>
         {% endfor %}
-      </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
