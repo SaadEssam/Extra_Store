@@ -1,35 +1,12 @@
-{% extends '../../store/base.html' %}
+{% extends '../sub_base.html' %}
 {% block title %}Delete Account{% endblock %}
-{% block content %}
+{% block sub_content %}
 
-<style>
-  .account-form input {
-    border: 2px solid #ccc;
-    height: calc(2em + .75rem + 2px);
-  }
-  .account-form input:focus {
-    border-color: #1497ff;
-    box-shadow: none;
-  }
-</style>
 
-<div class="container-fluid">
-  <div class="row no-gutter">
-    <div class="col-md-12">
-      <div class="login d-flex align-items-center py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-6 mx-auto">
-              <div class="p-4">
-                <h3 class="mb-4">Account Deleted</h3>
-                <p>Thank you</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <div>
+    <h3 class="mb-4">Delete Account</h3>
+    <p>You have now deleted your account</p>
   </div>
 </div>
-
 {% endblock %}

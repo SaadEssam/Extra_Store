@@ -17,7 +17,7 @@ from .tokens import account_activation_token
 @login_required
 def dashboard(request):
   orders = user_orders(request)
-  return render(request, 'account/user/dashboard.html', {'orders': orders})
+  return render(request, 'account/dashboard/dashboard.html', {'orders': orders})
 
 
 @login_required
@@ -30,7 +30,7 @@ def edit_details(request):
   else:
     user_form = UserEditForm(instance=request.user)
     
-  return render(request, 'account/user/edit_details.html', {'user_form': user_form})
+  return render(request, 'account/dashboard/edit_details.html', {'user_form': user_form})
 
 
 @login_required
