@@ -1,36 +1,14 @@
-{% extends '../store/base.html' %}
+{% extends './sub_base.html' %}
 {% block title %}Order Placed{% endblock %}
 {% block content %}
 
-<style>
-  .account-form input {
-    border: 2px solid #ccc;
-    height: clac(2em + .75em + 2px);
-  }
 
-  .account-form input:focus {
-    border-color: #1497ff;
-    box-shadow: none;
-  }
-</style>
-
-<div class="container-fluid">
-  <div class="row no-gutter">
-    <div class="col-md-12">
-      <div class="login d-flex align-items-center py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-6 mx-auto">
-              <div class="p-4">
-                <h3 class="mb-4">Order has been placed</h3>
-                <p>Check your email for confirmation</p>
-                <a href="{% url 'account:dashboard' %}">See orders</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <div class="col-12 col-lg-6">
+    <h3 class="mb-4 pt-4">Order has been placed</h3>
+    <p>Check your email for confirmation</p>
+    <a href="{% url 'account:dashboard' %}">See orders</a>
   </div>
 </div>
+
 {% endblock %}
