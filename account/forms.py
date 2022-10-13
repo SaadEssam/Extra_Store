@@ -1,7 +1,11 @@
 from codecs import charmap_build
+
 from django import forms
+from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm,
+                                        SetPasswordForm)
+
 from .models import UserBase
-from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm, SetPasswordForm)
+
 
 class UserLoginForm(AuthenticationForm):
   username = forms.CharField(widget=forms.TextInput(
@@ -15,7 +19,7 @@ class RegistrationForm(forms.ModelForm):
   email = forms.CharField(max_length=100, help_text='Required', error_messages={'required': 'Sorry, you will need an email'})
   password = forms.CharField(label='Password', widget=forms.PasswordInput)
   password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
-  
+
   class Meta:
     model = UserBase
     fields = ('user_name', 'email',)
@@ -55,7 +59,7 @@ class UserEditForm(forms.ModelForm):
   email = forms.EmailField(
     label='Account email (can not be changed)', max_length=200, widget=forms.TextInput(
       attrs={'class': 'form-control mb-3', 'placeholder': 'Email', 'id': 'form-email', 'readonly': 'readonly'}))
-  
+
   first_name = forms.CharField(
     label='Firstname', min_length=4, max_length=50, widget=forms.TextInput(
       attrs={'class': 'form-control mb-3', 'placeholder': 'Firstname', 'id': 'form-firstname', }))
@@ -73,7 +77,7 @@ class UserEditForm(forms.ModelForm):
 class PwdResetForm(PasswordResetForm):
   email = forms.EmailField(max_length=254, widget=forms.TextInput(
     attrs={'class': 'form-control mb-3', 'placeholder': 'Email', 'id': 'form-email'}))
-  
+
   def clean_email(self):
     email = self.cleaned_data['email']
     u = UserBase.objects.filter(email=email)
