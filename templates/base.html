@@ -64,44 +64,44 @@
                         <span class="fs15 fw500">Shop</span>
                     </button>
 
-                    {% if user.is_authenticated %}
-                    <a type="button" role="button" href="{% url 'account:logout' %}"
-                        class="btn btn-outline-secondary border-0 basket-btn">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-door-closed" viewBox="0 0 16 16">
-                                <path
-                                    d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z" />
-                                <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z" />
-                            </svg>
-                        </div>
-                        <span class="fs15 fw500">Logout</span>
-                    </a>
-                    {% else %}
-                    <a type="button" role="button" href=""
-                        class="btn btn-outline-secondary border-0 basket-btn">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-door-closed" viewBox="0 0 16 16">
-                                <path
-                                    d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z" />
-                                <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z" />
-                            </svg>
-                        </div>
-                        <span class="fs15 fw500">Login</span>
-                    </a>
-                    {% endif %}
-                    <a type="button" role="button" href="{% url 'account:dashboard' %}"
-                        class="btn btn-outline-secondary border-0 basket-btn">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-person" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                            </svg>
-                        </div>
-                        <span class="fs15 fw500">Account</span>
-                    </a>
+                    <div>
+                      <div class="collapse navbar-collapse" id="navbarSupportContent2">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-reset" href="#" id="navbarDropdown" role="button"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              <div class="small text-muted">Hello,
+                                {% if user.is_authenticated %}
+                                  {{ request.user.name }}
+                                {% else %}
+                                Login
+                                {% endif %}
+                              </div>
+                              <span class="fs15 fw500">Account &amp; Lists
+                              </span>
+                              </span>
+                            </a>
+                            <div class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
+                              <div class="card border-0">
+                                <div class="card-body">
+                                  <h6 class="card-title">My Account</h6>
+                                  <ul class="list-group list-group-flush dropdown-account-link">
+                                    {% if user.is_authenticated %}
+                                    <a href="{% url 'account:dashboard' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Your Account</a>
+                                    <a href="#" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Orders</a>
+                                    <a href="{% url 'account:logout' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Logout</a>
+                                    {% else %}
+                                    <a href="{% url 'account:login' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Login</a>
+                                    {% endif %}
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
                     <a type="button" role="button" href="{% url 'basket:basket_summary' %}"
                         class="btn btn-outline-secondary border-0 basket-btn">
                         {% with total_qty=basket|length %}
@@ -133,6 +133,16 @@
                             </li>
                             {% endfor %}
                         </ul>
+                        <h6 class="card-title">My Account</h6>
+                          <ul class="list-group list-group-flush dropdown-account-link">
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'account:dashboard' %}" class="dropdown-item">Your Account</a>
+                            <a href="#" class="dropdown-item">Orders</a>
+                            <a href="{% url 'account:logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account:login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                          </ul>
                     </div>
                 </div>
                 <form class="d-flex w-100 d-md-none">
