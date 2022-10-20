@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import UserBase
+from .models import Customer
 
 # Register your models here.
 
-admin.site.register(UserBase)
+admin.site.register(Customer)
