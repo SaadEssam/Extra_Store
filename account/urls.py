@@ -22,9 +22,16 @@ urlpatterns = [
                                                                                               form_class=PwdResetConfirmForm), name='password_reset_confirm'),
   path('password_reset/password_reset_email_confirm/', TemplateView.as_view(template_name='account/password_reset/reset_status.html'), name='password_reset_done'),
   path('password_reset_complete/', TemplateView.as_view(template_name='account/password_reset/reset_status.html'), name='password_reset_complete'),
+  # Dashboard
   path('dashboard/', views.dashboard, name='dashboard'),
   path('profile/edit/', views.edit_details, name='edit_details'),
   path('profile/delete_user/', views.delete_user, name='delete_user'),
   path('profile/delete_confirm/', TemplateView.as_view(template_name='account/dashboard/delete_confirm.html'), 
                                                         name='delete_confirmation'),
+  # Addresses
+  path("addresses/", views.view_address, name="addresses"),
+  path("add_address/", views.add_address, name="add_address"),
+  path("addresses/edit/<slug:id>/", views.edit_address, name="edit_address"),
+  path("addresses/delete/<slug:id>/", views.delete_address, name="delete_address"),
+  path("addresses/set_default/<slug:id>/", views.set_default, name="set_default"),
 ]
