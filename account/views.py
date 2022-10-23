@@ -142,3 +142,8 @@ def add_to_wishlist(request, id):
   else:
     product.users_wishlist.add(request.user)
   return HttpResponseRedirect(request.META["HTTP_REFERER"])
+
+@login_required
+def wishlist(request):
+  products = Product.objects.filter(users_wishlist=request.user)
+  return render(request, "account/dashboard/user_wishlist.html", {"wishlist": products})
