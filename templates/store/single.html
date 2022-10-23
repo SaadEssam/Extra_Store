@@ -36,14 +36,8 @@
           >
             Add to basket
           </button>
-          <button
-            type="button"
-            id="add-button"
-            value="{{product.id}}"
-            class="btn btn-light fw500"
-          >
-            Add to Favorites
-          </button>
+          <a href="{% url 'account:user_wishlist' product.id %}" class="btn btn-light fw500" role="button" 
+            aria-disabled="true">Add to Wishlist</a>
         </div>
       </div>
 
