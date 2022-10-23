@@ -2,13 +2,13 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.sites.shortcuts import get_current_site
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-
 from orders.views import add, user_orders
+from store.models import Product
 
 from .forms import RegistrationForm, UserEditForm, UserAddressForm
 from .models import Customer, Address
@@ -131,3 +131,14 @@ def set_default(request, id):
   Address.objects.filter(customer=request.user, default=True).update(default=False)
   Address.objects.filter(pk=id, customer=request.user).update(default=True)
   return redirect("account:addresses")
+
+
+# Wishlist
+@login_required
+def add_to_wishlist(request, id):
+  product = get_object_or_404(Product, id=id)
+  if product.users_wishlist.filter(id=request.user.id).exists():
+    product.users_wishlist.remove(request.user)
+  else:
+    product.users_wishlist.add(request.user)
+  return HttpResponseRedirect(request.META["HTTP_REFERER"])

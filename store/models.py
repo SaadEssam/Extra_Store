@@ -1,4 +1,4 @@
-from pydoc import describe
+from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
@@ -65,6 +65,7 @@ class Product(models.Model):
   is_active = models.BooleanField(verbose_name=_("Product Visibility"), help_text=_("Change product Visibility"), default=True)
   created_at = models.DateTimeField(_("Created at"), auto_now_add=True, editable=False)
   updated_at = models.DateTimeField(_("Updated at"), auto_now=True)
+  users_wishlist = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="user_wishlist", blank=True)
 
   class Meta:
     ordering = ("-created_at",)
