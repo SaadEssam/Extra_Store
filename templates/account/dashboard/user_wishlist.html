@@ -8,10 +8,10 @@
   <hr />
 
 {% if wishlist %}
-  {% for product in wishlist%}
-    <div class="card mb-3">
+  {% for product in wishlist %}
+    <div class="card mb-3 rounded-0">
       <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-2">
           {% for image in product.product_image.all %}
             {% if image.is_feature %}
               <img class="img-fluid d-block p-2" width="135px" src="{{ image.image.url }}"
@@ -19,11 +19,28 @@
             {% endif %}
           {% endfor %}
         </div>
-        <div class="col-md-8">
+        <div class="col-md-10">
           <div class="card-body">
             <h5 class="card-title">{{ product.title }}</h5>
             <p class="card-text">{{ product.description }}</p>
             <p class="card-text"><small class="text-muted">${{ product.regular_price }}</small></p>
+            <div class="">
+              <label for="select">Qty</label>
+              <select id="select" class="h6 store-select-dropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <button
+              type="button"
+              id="add-button"
+              value="{{product.id}}"
+              class="btn btn-success fw500 btn-sm"
+              >
+              Add to basket
+            </button>
             <a type="button" class="btn btn-danger fw500 btn-sm" href="{% url 'account:user_wishlist' product.id %}">Remove from Wishlist</a>
           </div>
         </div>
@@ -35,4 +52,25 @@
 {% endif %}
 
 </div>
+
+<script>
+  //Add button
+  $(document).on("click", "#add-button", function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: '{% url "basket:basket_add" %}',
+      data: {
+        productid: $("#add-button").val(),
+        productqty: $("#select option:selected").text(),
+        csrfmiddlewaretoken: "{{csrf_token}}",
+        action: "post",
+      },
+      success: function (json) {
+        document.getElementById("basket-qty").innerHTML = json.qty;
+      },
+      error: function (xhr, errmsg, err) {},
+    });
+  });
+</script>
 {% endblock %}
