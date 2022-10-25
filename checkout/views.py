@@ -11,7 +11,6 @@ from orders.models import Order, OrderItem
 from .models import DeliveryOptions
 
 from paypalcheckoutsdk.orders import OrdersGetRequest
-
 from .paypal import PayPalClient
 # Create your views here.
 
@@ -68,13 +67,13 @@ def payment_selection(request):
 
 @login_required
 def payment_complete(request):
-  PPClinet = PayPalClient()
+  PPClient = PayPalClient()
   
   body = json.loads(request.body)
   data = body["orderID"]
   user_id = request.user.id
   
-  requestorder = OrderGetRequest(data)
+  requestorder = OrdersGetRequest(data)
   response = PPClient.client.execute(requestorder)
   
   total_paid = response.result.purchase_units[0].amount.value
