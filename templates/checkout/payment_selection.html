@@ -91,7 +91,7 @@
             orderID: data.orderID
           })
         }).then(function () {
-          location.href = "";
+          location.href = "{% url 'checkout:payment_successful' %}";
         })
       },
     }).render('#paypal-button-container');
