@@ -60,3 +60,12 @@ def payment_selection(request):
     messages.success(request, "Please select address option")
     return HttpResponseRedirect(request.META["HTTP_REFERER"])
   return render(request, "checkout/payment_selection.html", {})
+
+@login_required
+def payment_complete(request):
+  PPClinet = PayPalClient()
+  
+  body = json.loads(request.body)
+  data = body["orderID"]
+  user_id = request.user.id
+  
