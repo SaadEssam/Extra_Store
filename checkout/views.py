@@ -1,5 +1,8 @@
+from account.models import Address
 from basket.basket import Basket
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -31,3 +34,19 @@ def basket_update_delivery(request):
     
     response = JsonResponse({"total": updated_total_price, "delivery_price": delivery_type.delivery_price})
     return response
+
+@login_required
+def delivery_address(request):
+  session = request.session
+  if "purchase" not in request.session:
+    messages.success(request, "Please select delivery option")
+    return HttpResponseRedirect(request.META["HTTP_REFERER"])
+  
+  addresses = Address.objects.filter(customer=request.user).order_by("-default")
+  
+  if "address" not in request.session:
+    session["address"] = {"address_id": str(addresses[0].id)}
+  else:
+    session["address"]["address_id"] = str(addresses[0].id)
+    session.modified = True
+  return render(request, "checkout/delivery_address.html", {"addresses": addresses})
