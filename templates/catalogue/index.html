@@ -12,7 +12,11 @@
         simply skip over it entirely.
       </p>
       <p>
-        <a href="#" class="btn btn-primary my-2">Make an account</a>
+        {% if user.is_authenticated %}
+          <hr />
+          {% else %}
+          <a href="{% url 'account:register' %}" class="btn btn-primary my-2">Make an account</a>
+        {% endif %}
       </p>
     </div>
   </div>
