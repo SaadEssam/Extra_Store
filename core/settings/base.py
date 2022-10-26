@@ -26,12 +26,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'store',
-    'basket',
-    'account',
-    'orders',
+    'core.apps.catalogue',
+    'core.apps.basket',
+    'core.apps.account',
+    'core.apps.orders',
+    'core.apps.checkout',
     'mptt',
-    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -57,8 +57,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'store.context_processors.categories',
-                'basket.context_processors.basket',
+                'core.apps.catalogue.context_processors.categories',
+                'core.apps.basket.context_processors.basket',
             ],
         },
     },

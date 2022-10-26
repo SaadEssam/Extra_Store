@@ -42,7 +42,7 @@
                                     </svg></i>
                             </a>
                             <ul class="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{% url 'store:store_home' %}">All</a></li>
+                                <li><a class="dropdown-item" href="{% url 'catalogue:catalogue_home' %}">All</a></li>
                                 {% for c in categories %}
                                 <li {% if category.slug == c.slug %}class="selected" {% endif %}>
                                     <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
@@ -126,7 +126,7 @@
                 <div class="d-md-none d-lg-none d-xl-none">
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li><a class="dropdown-item" href="{% url 'store:store_home' %}">All</a></li>
+                            <li><a class="dropdown-item" href="{% url 'catalogue:catalogue_home' %}">All</a></li>
                             {% for c in categories %}
                             <li {% if category.slug == c.slug %}class="selected" {% endif %}>
                                 <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
