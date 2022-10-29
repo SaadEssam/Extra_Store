@@ -1,4 +1,6 @@
 {% extends '../base.html' %}
+{% load static %}
+{% block stylesheet %}{% static 'store/css/store.css' %}{% endblock %}
 {% block title %}Extra Store{%endblock %}
 {% block content %}
 
@@ -6,10 +8,11 @@
   <div class="row py-lg-3">
     <div class="col-lg-6 col-md-8 mx-auto">
       <h1 class="h1 fw-bold">Search, Read, Buy, Review</h1>
-      <p class="lead text-muted">
-        Something short and leading about the collection below—its contents, the
-        creator, etc. Make it short and sweet, but not too short so folks don’t
-        simply skip over it entirely.
+      <p class="paragraph ">
+        <span style="--delay: 4s;">Something short and leading about the collection </span>
+        <span style="--delay: 6s;">below—its contents, the creator, etc. Make it short </span style="--delay:">
+        <span style="--delay: 7.5s;">and sweet, but not too short so folks don’t simply skip</span style="--delay:">
+        <span style="--delay: 8s;">over it entirely.</span>
       </p>
       <p>
         {% if user.is_authenticated %}
