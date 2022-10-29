@@ -1,12 +1,22 @@
 import pytest
 from pytest_factoryboy import register
-from tests.factories import CategoryFactory, ProductTypeFactory, ProductSpecificationFactory, ProductFactory, ProductSpecificationValueFactory
+from tests.factories import (
+  AddressFactory,
+  CategoryFactory,
+  CustomerFactory,
+  ProductFactory, 
+  ProductTypeFactory,
+  ProductSpecificationFactory, 
+  ProductSpecificationValueFactory,)
 
+register(AddressFactory)
 register(CategoryFactory)
+register(CustomerFactory)
 register(ProductFactory)
 register(ProductTypeFactory)
 register(ProductSpecificationFactory)
 register(ProductSpecificationValueFactory)
+
 
 
 @pytest.fixture
@@ -42,3 +52,21 @@ def product_specification(db, product_specification_factory):
 def product(db, product_factory):
     product = product_factory.create()
     return product
+
+
+@pytest.fixture
+def customer(db, customer_factory):
+  new_customer = customer_factory.create()
+  return new_customer
+
+
+@pytest.fixture
+def adminuser(db, customer_factory):
+  new_customer = customer_factory.create(name='admin_user', is_staff=True, is_superuser=True)
+  return new_customer
+
+
+@pytest.fixture
+def address(db, address_factory):
+  new_address = address_factory.create()
+  return new_address

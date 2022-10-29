@@ -2,15 +2,15 @@ from django.contrib import messages
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.sites.shortcuts import get_current_site
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from core.apps.orders.views import user_orders
-from core.apps.catalogue.models import Product
 from core.apps.orders.models import Order
+from core.apps.catalogue.models import Product
 
 from .forms import RegistrationForm, UserEditForm, UserAddressForm
 from .models import Customer, Address
@@ -70,6 +70,8 @@ def account_register(request):
       })
       user.email_user(subject=subject, message=message)
       return render(request, 'account/registration/register_email_confirm.html', {'form': registerForm})
+    else:
+      return HttpResponse("Error handler content", status=400)
       
   else:
     registerForm = RegistrationForm()
@@ -106,6 +108,8 @@ def add_address(request):
       address_form.customer = request.user
       address_form.save()
       return HttpResponseRedirect(reverse("account:addresses"))
+    else:
+      return HttpResponse("Error handler content", status=400)
   else:
     address_form = UserAddressForm()
   return render(request, "account/dashboard/edit_addresses.html", {"form": address_form})
