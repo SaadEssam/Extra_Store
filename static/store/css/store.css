@@ -7,7 +7,7 @@
   display: block;
   opacity: 0;
   animation: reveal 0.5 forwards var(--delay);
-  font-size:large;
+  font-size: large;
 }
 
 @keyframes reveal {
