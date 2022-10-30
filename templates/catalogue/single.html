@@ -1,4 +1,5 @@
 {% extends '../base.html' %}
+{% load i18n %}
 {% load static %}
 {% block stylesheet %}{% static 'store/css/store.css' %}{% endblock %}
 {% block title %}
@@ -22,7 +23,7 @@
           <div class="d-flex d-flex-inline justify-content-between">
             <div>
               <span class="h3">${{ product.regular_price }}</span>
-              <p class="text-muted">includes tax</p>
+              <p class="text-muted">{% trans 'includes tax' %}</p>
             </div>
             <div class="">
               <label for="select">Qty</label>

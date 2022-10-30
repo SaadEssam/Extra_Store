@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-30 15:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\core\apps\account\models.py:19
+msgid "You must provide a valid email address"
+msgstr ""
+
+#: .\core\apps\account\models.py:36
+msgid "Superuser Account: You must provide an email address"
+msgstr ""
+
+#: .\core\apps\account\models.py:46
+msgid "Customer Account: You must provide an email address"
+msgstr ""
+
+#: .\core\apps\account\models.py:57
+msgid "email address"
+msgstr ""
+
+#: .\core\apps\account\models.py:89
+msgid "Customer"
+msgstr ""
+
+#: .\core\apps\account\models.py:90
+msgid "Full Name"
+msgstr ""
+
+#: .\core\apps\account\models.py:91
+msgid "Phone Number"
+msgstr ""
+
+#: .\core\apps\account\models.py:92
+msgid "Postcode"
+msgstr ""
+
+#: .\core\apps\account\models.py:93
+msgid "Address Line 1"
+msgstr ""
+
+#: .\core\apps\account\models.py:94
+msgid "Address Line 2"
+msgstr ""
+
+#: .\core\apps\account\models.py:95
+msgid "Town/City/State"
+msgstr ""
+
+#: .\core\apps\account\models.py:96
+msgid "Delivery Instructions"
+msgstr ""
+
+#: .\core\apps\account\models.py:97 .\core\apps\catalogue\models.py:66
+msgid "Created at"
+msgstr ""
+
+#: .\core\apps\account\models.py:98 .\core\apps\catalogue\models.py:67
+msgid "Updated at"
+msgstr ""
+
+#: .\core\apps\account\models.py:99
+msgid "Default"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:9
+msgid "Category Name"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:9
+msgid "Required and unique"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:11
+msgid "Category safe URL"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:19
+msgid "Category"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:20
+msgid "Categories"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:30
+msgid "Product Name"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:30 .\core\apps\catalogue\models.py:43
+#: .\core\apps\catalogue\models.py:56 .\core\apps\checkout\models.py:14
+#: .\core\apps\checkout\models.py:18 .\core\apps\checkout\models.py:19
+#: .\core\apps\checkout\models.py:20 .\core\apps\checkout\models.py:21
+#: .\core\apps\checkout\models.py:32
+msgid "Required"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:34
+msgid "Product Type"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:35
+msgid "Product Types"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:43
+msgid "Name"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:46
+msgid "Product Specification"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:47
+msgid "Product Specifications"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:56
+msgid "title"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:57
+msgid "description"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:57
+msgid "Not required"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:59
+msgid "Regular price"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:59 .\core\apps\catalogue\models.py:62
+#: .\core\apps\checkout\models.py:15
+msgid "Maximum 999.99"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:60 .\core\apps\catalogue\models.py:63
+#: .\core\apps\checkout\models.py:16
+msgid "The price must be between 0 and 999.99"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:62
+msgid "Discount price"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:65
+msgid "Product Visibility"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:65
+msgid "Change product Visibility"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:72
+msgid "Product"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:73
+msgid "Products"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:85
+msgid "value"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:85
+msgid "Product Specification value (maximum of 255 words)"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:89
+msgid "Product Specification Value"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:90
+msgid "Product Specification values"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:98
+msgid "image"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:98
+msgid "Upload a product image"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:100
+msgid "Alternative text"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:100
+msgid "Please add alternative text"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:107
+msgid "Product Image"
+msgstr ""
+
+#: .\core\apps\catalogue\models.py:108
+msgid "Product Images"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:14
+msgid "delivery_name"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:15
+msgid "delivery price"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:18
+msgid "delivery_method"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:19
+msgid "delivery time_frame"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:20
+msgid "delivery window"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:21
+msgid "list order"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:25
+msgid "Delivery Option"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:26
+msgid "Delivery Options"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:32
+msgid "name"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:36
+msgid "Payment Selection"
+msgstr ""
+
+#: .\core\apps\checkout\models.py:37
+msgid "Payment Selections"
+msgstr ""
+
+#: .\core\settings\base.py:108
+msgid "English"
+msgstr ""
+
+#: .\core\settings\base.py:109
+msgid "arabic"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_email.html:8
+msgid "Your username, in case you’ve forgotten:"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""

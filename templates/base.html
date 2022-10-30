@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -28,7 +29,7 @@
                         <path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
                       </svg>
-                      Extra Store
+                      {% trans "Extra Store" %}
                     </a>
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item dropdown">
@@ -84,14 +85,14 @@
                             <div class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
                               <div class="card border-0">
                                 <div class="card-body">
-                                  <h6 class="card-title">My Account</h6>
+                                  <h6 class="card-title">{% trans 'My Account' %}</h6>
                                   <ul class="list-group list-group-flush dropdown-account-link">
                                     {% if user.is_authenticated %}
-                                    <a href="{% url 'account:dashboard' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Your Account</a>
-                                    <a href="{% url 'account:user_orders' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Orders</a>
-                                    <a href="{% url 'account:logout' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Logout</a>
+                                    <a href="{% url 'account:dashboard' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">{% trans 'Your Account' %}</a>
+                                    <a href="{% url 'account:user_orders' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">{% trans 'Orders' %}</a>
+                                    <a href="{% url 'account:logout' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">{% trans 'Logout' %}</a>
                                     {% else %}
-                                    <a href="{% url 'account:login' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">Login</a>
+                                    <a href="{% url 'account:login' %}" class="text-reset small list-group-item p-0 pb-1 border-0 dropdown-account-link">{% trans 'Login' %}</a>
                                     {% endif %}
                                   </ul>
                                 </div>
