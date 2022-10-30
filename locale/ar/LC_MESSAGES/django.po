@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-30 16:49+0200\n"
-"PO-Revision-Date: 2022-10-30 16:30+0000\n"
+"POT-Creation-Date: 2022-10-30 19:02+0200\n"
+"PO-Revision-Date: 2022-10-30 18:52+0000\n"
 "Last-Translator: Anonymous User <t@t.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -22,15 +22,15 @@ msgstr ""
 
 #: .\core\apps\account\models.py:19
 msgid "You must provide a valid email address"
-msgstr ""
+msgstr "يجب عليك تقديم عنوان بريد إلكتروني صالح"
 
 #: .\core\apps\account\models.py:36
 msgid "Superuser Account: You must provide an email address"
-msgstr ""
+msgstr "حساب المستخدم المتميز: يجب عليك تقديم عنوان بريد إلكتروني"
 
 #: .\core\apps\account\models.py:46
 msgid "Customer Account: You must provide an email address"
-msgstr ""
+msgstr "حساب العميل: يجب عليك تقديم عنوان بريد إلكتروني"
 
 #: .\core\apps\account\models.py:57
 msgid "email address"
@@ -62,11 +62,11 @@ msgstr "العنوان الثاني"
 
 #: .\core\apps\account\models.py:95
 msgid "Town/City/State"
-msgstr ""
+msgstr "مدينة/محافظة"
 
 #: .\core\apps\account\models.py:96
 msgid "Delivery Instructions"
-msgstr ""
+msgstr "تعليمات التوصيل"
 
 #: .\core\apps\account\models.py:97 .\core\apps\catalogue\models.py:66
 msgid "Created at"
@@ -151,7 +151,7 @@ msgstr "السعر الطبيعي"
 #: .\core\apps\catalogue\models.py:59 .\core\apps\catalogue\models.py:62
 #: .\core\apps\checkout\models.py:15
 msgid "Maximum 999.99"
-msgstr ""
+msgstr "حد اقصى 999.99"
 
 #: .\core\apps\catalogue\models.py:60 .\core\apps\catalogue\models.py:63
 #: .\core\apps\checkout\models.py:16
@@ -164,13 +164,13 @@ msgstr "سعر التخفيض"
 
 #: .\core\apps\catalogue\models.py:65
 msgid "Product Visibility"
-msgstr ""
+msgstr "رؤية المنتج"
 
 #: .\core\apps\catalogue\models.py:65
 msgid "Change product Visibility"
-msgstr ""
+msgstr "تغير رؤية المنتج"
 
-#: .\core\apps\catalogue\models.py:72
+#: .\core\apps\catalogue\models.py:72 .\templates\catalogue\single.html:6
 msgid "Product"
 msgstr "المنتج"
 
@@ -180,11 +180,11 @@ msgstr "المنتجات"
 
 #: .\core\apps\catalogue\models.py:85
 msgid "value"
-msgstr ""
+msgstr "القيمة"
 
 #: .\core\apps\catalogue\models.py:85
 msgid "Product Specification value (maximum of 255 words)"
-msgstr ""
+msgstr "قيم مواصفات المنتج (بحد أقصى 255 كلمة)"
 
 #: .\core\apps\catalogue\models.py:89
 msgid "Product Specification Value"
@@ -220,15 +220,15 @@ msgstr "صور المنتج"
 
 #: .\core\apps\checkout\models.py:14
 msgid "delivery_name"
-msgstr ""
+msgstr "اسم التوصيل"
 
 #: .\core\apps\checkout\models.py:15
 msgid "delivery price"
-msgstr ""
+msgstr "سعر التوصيل"
 
 #: .\core\apps\checkout\models.py:18
 msgid "delivery_method"
-msgstr ""
+msgstr "طريقة التوصيل"
 
 #: .\core\apps\checkout\models.py:19
 msgid "delivery time_frame"
@@ -287,40 +287,103 @@ msgstr ""
 
 #: .\templates\account\password_reset\password_reset_email.html:10
 msgid "Thanks for using our site!"
-msgstr ""
+msgstr "شكرا لاستخدامك موقعنا"
 
 #: .\templates\account\password_reset\password_reset_email.html:12
 #, python-format
 msgid "The %(site_name)s team"
 msgstr ""
 
-#: .\templates\base.html:32
+#: .\templates\base.html:7 .\templates\base.html:33
+#: .\templates\catalogue\index.html:5
 msgid "Extra Store"
 msgstr "إكسترا ستور"
 
-#: .\templates\base.html:88
+#: .\templates\base.html:39 .\templates\base.html:47
+msgid "All"
+msgstr "جميع الاقسام"
+
+#: .\templates\base.html:97
+msgid "Hello,"
+msgstr ":مرحبا"
+
+#: .\templates\base.html:104
+msgid "Account &amp; Lists"
+msgstr "الحساب و القوائم"
+
+#: .\templates\base.html:111
 msgid "My Account"
 msgstr "الحساب"
 
-#: .\templates\base.html:91
+#: .\templates\base.html:114 .\templates\base.html:163
 msgid "Your Account"
 msgstr "الحساب"
 
-#: .\templates\base.html:92
+#: .\templates\base.html:115
 msgid "Orders"
 msgstr "مشترياتك"
 
-#: .\templates\base.html:93
+#: .\templates\base.html:116 .\templates\base.html:165
 msgid "Logout"
 msgstr "تسجيل خروج"
 
-#: .\templates\base.html:95
+#: .\templates\base.html:118 .\templates\base.html:167
 msgid "Login"
 msgstr "تسجيل دخول"
+
+#: .\templates\base.html:147
+msgid "Basket"
+msgstr "السلة"
+
+#: .\templates\catalogue\index.html:11
+msgid "Search, Read, Buy, Review"
+msgstr "إبحث ، إقرأ ، أشتري ، قيم"
+
+#: .\templates\catalogue\index.html:13
+msgid "Let us remember: One book,"
+msgstr "لنتذكر : كتاب واحد"
+
+#: .\templates\catalogue\index.html:14
+msgid "one pen, one child, and one teacher"
+msgstr "وقلم واحد، وطفل واحد، ومعلم واحد"
+
+#: .\templates\catalogue\index.html:15
+msgid "can change the world."
+msgstr ".يمكنه تغيير العالم"
+
+#: .\templates\catalogue\index.html:21
+#, fuzzy
+#| msgid "My Account"
+msgid "Make an account"
+msgstr "الحساب"
+
+#: .\templates\catalogue\index.html:33
+msgid "All Books"
+msgstr "جميع الكتب"
+
+#: .\templates\catalogue\index.html:36
+msgid "There are currently no products active"
+msgstr ".لا يوجد حاليا أي منتجات"
+
+#: .\templates\catalogue\single.html:15
+msgid "Your Wishlist"
+msgstr "قائمتك"
 
 #: .\templates\catalogue\single.html:26
 msgid "includes tax"
 msgstr "شامل الضريبة"
+
+#: .\templates\catalogue\single.html:29
+msgid "Qty"
+msgstr "الكمية"
+
+#: .\templates\catalogue\single.html:45
+msgid "Add to basket"
+msgstr "أضف إلى العربة"
+
+#: .\templates\catalogue\single.html:48
+msgid "Add to Wishlist"
+msgstr "أضف إلى القائمة"
 
 #: .\venv\Lib\site-packages\_pytest\config\argparsing.py:474
 #, python-format
@@ -1533,3 +1596,6 @@ msgstr ""
 #: .\venv\Lib\site-packages\isort\main.py:158
 msgid "show this help message and exit"
 msgstr ""
+
+#~ msgid "EN"
+#~ msgstr "AR"

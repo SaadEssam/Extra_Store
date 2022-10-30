@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-30 16:49+0200\n"
+"POT-Creation-Date: 2022-10-30 19:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,7 +168,7 @@ msgstr ""
 msgid "Change product Visibility"
 msgstr ""
 
-#: .\core\apps\catalogue\models.py:72
+#: .\core\apps\catalogue\models.py:72 .\templates\catalogue\single.html:6
 msgid "Product"
 msgstr ""
 
@@ -292,32 +292,93 @@ msgstr ""
 msgid "The %(site_name)s team"
 msgstr ""
 
-#: .\templates\base.html:32
+#: .\templates\base.html:7 .\templates\base.html:33
+#: .\templates\catalogue\index.html:5
 msgid "Extra Store"
 msgstr ""
 
-#: .\templates\base.html:88
+#: .\templates\base.html:39 .\templates\base.html:47
+msgid "All"
+msgstr ""
+
+#: .\templates\base.html:97
+msgid "Hello,"
+msgstr ""
+
+#: .\templates\base.html:104
+msgid "Account &amp; Lists"
+msgstr ""
+
+#: .\templates\base.html:111
 msgid "My Account"
 msgstr ""
 
-#: .\templates\base.html:91
+#: .\templates\base.html:114 .\templates\base.html:163
 msgid "Your Account"
 msgstr ""
 
-#: .\templates\base.html:92
+#: .\templates\base.html:115
 msgid "Orders"
 msgstr ""
 
-#: .\templates\base.html:93
+#: .\templates\base.html:116 .\templates\base.html:165
 msgid "Logout"
 msgstr ""
 
-#: .\templates\base.html:95
+#: .\templates\base.html:118 .\templates\base.html:167
 msgid "Login"
+msgstr ""
+
+#: .\templates\base.html:147
+msgid "Basket"
+msgstr ""
+
+#: .\templates\catalogue\index.html:11
+msgid "Search, Read, Buy, Review"
+msgstr ""
+
+#: .\templates\catalogue\index.html:13
+msgid "Let us remember: One book,"
+msgstr ""
+
+#: .\templates\catalogue\index.html:14
+msgid "one pen, one child, and one teacher"
+msgstr ""
+
+#: .\templates\catalogue\index.html:15
+msgid "can change the world."
+msgstr ""
+
+#: .\templates\catalogue\index.html:21
+msgid "Make an account"
+msgstr ""
+
+#: .\templates\catalogue\index.html:33
+msgid "All Books"
+msgstr ""
+
+#: .\templates\catalogue\index.html:36
+msgid "There are currently no products active"
+msgstr ""
+
+#: .\templates\catalogue\single.html:15
+msgid "Your Wishlist"
 msgstr ""
 
 #: .\templates\catalogue\single.html:26
 msgid "includes tax"
+msgstr ""
+
+#: .\templates\catalogue\single.html:29
+msgid "Qty"
+msgstr ""
+
+#: .\templates\catalogue\single.html:45
+msgid "Add to basket"
+msgstr ""
+
+#: .\templates\catalogue\single.html:48
+msgid "Add to Wishlist"
 msgstr ""
 
 #: .\venv\Lib\site-packages\_pytest\config\argparsing.py:474
@@ -1531,3 +1592,6 @@ msgstr ""
 #: .\venv\Lib\site-packages\isort\main.py:158
 msgid "show this help message and exit"
 msgstr ""
+
+#~ msgid "EN"
+#~ msgstr "AR"

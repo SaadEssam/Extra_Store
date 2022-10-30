@@ -3,7 +3,7 @@
 {% load static %}
 {% block stylesheet %}{% static 'store/css/store.css' %}{% endblock %}
 {% block title %}
-{% if product %}{{ product.title }}{% else %}Product{% endif %} 
+{% if product %}{{ product.title }}{% else %}{% trans 'Product' %}{% endif %} 
 {% endblock %}
 {% block content %}
 
@@ -12,7 +12,7 @@
     {% if messages %}
       <div class="alert alert-warning" alert="{{ message.tags }}" role="alert">
         {% for message in messages %}
-          {{ message|safe }} - <a href="{% url 'account:wishlist' %}" class="alert-link">Your Wishlist</a>
+          {{ message|safe }} - <a href="{% url 'account:wishlist' %}" class="alert-link">{% trans 'Your Wishlist' %}</a>
         {% endfor %}
       </div>
     {% endif %}
@@ -26,7 +26,7 @@
               <p class="text-muted">{% trans 'includes tax' %}</p>
             </div>
             <div class="">
-              <label for="select">Qty</label>
+              <label for="select">{% trans 'Qty' %}</label>
               <select id="select" class="h6 store-select-dropdown">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -42,10 +42,10 @@
             value="{{product.id}}"
             class="btn btn-success fw500"
           >
-            Add to basket
+            {% trans 'Add to basket' %}
           </button>
             <a href="{% url 'account:user_wishlist' product.id %}" class="btn btn-light fw500" role="button" 
-              aria-disabled="true">Add to Wishlist</a>
+              aria-disabled="true">{% trans 'Add to Wishlist' %}</a>
         </div>
       </div>
 

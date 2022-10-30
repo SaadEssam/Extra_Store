@@ -1,24 +1,24 @@
 {% extends '../base.html' %}
+{% load i18n %}
 {% load static %}
 {% block stylesheet %}{% static 'store/css/store.css' %}{% endblock %}
-{% block title %}Extra Store{%endblock %}
+{% block title %}{% trans 'Extra Store' %}{%endblock %}
 {% block content %}
 
 <section class="py-5 text-center container">
   <div class="row py-lg-3">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="h1 fw-bold">Search, Read, Buy, Review</h1>
+      <h1 class="h1 fw-bold">{% trans 'Search, Read, Buy, Review' %}</h1>
       <p class="paragraph ">
-        <span style="--delay: 4s;">Something short and leading about the collection </span>
-        <span style="--delay: 6s;">below—its contents, the creator, etc. Make it short </span style="--delay:">
-        <span style="--delay: 7.5s;">and sweet, but not too short so folks don’t simply skip</span style="--delay:">
-        <span style="--delay: 8s;">over it entirely.</span>
+        <span style="--delay: 4s;"> {% trans 'Let us remember: One book,' %} </span>
+        <span style="--delay: 6s;">{% trans 'one pen, one child, and one teacher' %} </span style="--delay:">
+        <span style="--delay: 7.5s;">{% trans 'can change the world.' %}</span style="--delay:">
       </p>
       <p>
         {% if user.is_authenticated %}
           <hr />
           {% else %}
-          <a href="{% url 'account:register' %}" class="btn btn-primary my-2">Make an account</a>
+          <a href="{% url 'account:register' %}" class="btn btn-primary my-2">{% trans 'Make an account' %} </a>
         {% endif %}
       </p>
     </div>
@@ -30,10 +30,10 @@
   <div class="row">
     <div class="album py-5">
       <div class="pb-3">
-        <h1 class="h3">All Books</h1>
+        <h1 class="h3">{% trans 'All Books' %}</h1>
       </div>
       {% if not products %}
-      <div class="col-12">There are currently no products active</div>
+      <div class="col-12">{% trans 'There are currently no products active' %}</div>
         {% else %}
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
         {% for product in products %}
