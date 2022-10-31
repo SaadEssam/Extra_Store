@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-30 19:02+0200\n"
+"POT-Creation-Date: 2022-10-31 16:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Product"
 msgstr ""
 
-#: .\core\apps\catalogue\models.py:73
+#: .\core\apps\catalogue\models.py:73 .\templates\catalogue\category.html:4
 msgid "Products"
 msgstr ""
 
@@ -305,6 +305,11 @@ msgstr ""
 msgid "Hello,"
 msgstr ""
 
+#: .\templates\base.html:101 .\templates\base.html:118
+#: .\templates\base.html:167
+msgid "Login"
+msgstr ""
+
 #: .\templates\base.html:104
 msgid "Account &amp; Lists"
 msgstr ""
@@ -325,12 +330,24 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: .\templates\base.html:118 .\templates\base.html:167
-msgid "Login"
-msgstr ""
-
 #: .\templates\base.html:147
 msgid "Basket"
+msgstr ""
+
+#: .\templates\catalogue\category.html:14
+msgid "Popular"
+msgstr ""
+
+#: .\templates\catalogue\category.html:14
+msgid "products purchased"
+msgstr ""
+
+#: .\templates\catalogue\category.html:22 .\templates\catalogue\index.html:36
+msgid "There are currently no products active"
+msgstr ""
+
+#: .\templates\catalogue\category.html:22
+msgid "Home"
 msgstr ""
 
 #: .\templates\catalogue\index.html:11
@@ -357,10 +374,6 @@ msgstr ""
 msgid "All Books"
 msgstr ""
 
-#: .\templates\catalogue\index.html:36
-msgid "There are currently no products active"
-msgstr ""
-
 #: .\templates\catalogue\single.html:15
 msgid "Your Wishlist"
 msgstr ""
@@ -379,6 +392,22 @@ msgstr ""
 
 #: .\templates\catalogue\single.html:48
 msgid "Add to Wishlist"
+msgstr ""
+
+#: .\templates\payment\error.html:2
+msgid "Error"
+msgstr ""
+
+#: .\templates\payment\error.html:8
+msgid "Order Error"
+msgstr ""
+
+#: .\templates\payment\error.html:9
+msgid "Please Contact our customer support team."
+msgstr ""
+
+#: .\templates\payment\error.html:10
+msgid "Dashboard"
 msgstr ""
 
 #: .\venv\Lib\site-packages\_pytest\config\argparsing.py:474

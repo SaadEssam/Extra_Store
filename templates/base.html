@@ -98,7 +98,7 @@
                                 {% if user.is_authenticated %}
                                   {{ request.user.name }}
                                 {% else %}
-                                Login
+                                {% trans 'Login' %}
                                 {% endif %}
                               </div>
                               <span class="fs15 fw500">{% trans 'Account &amp; Lists' %}

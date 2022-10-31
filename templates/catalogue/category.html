@@ -1,6 +1,7 @@
 {% extends "../base.html" %}
+{% load i18n %}
 {% block title %}
-{% if category %}{{ category.name }}{% else %}Products{% endif %} 
+{% if category %}{{ category.name }}{% else %}{% trans 'Products' %}{% endif %} 
 {% endblock %}
 {% block content %}
 
@@ -10,7 +11,7 @@
       <h1 class="h2">{{ category.name|title }}</h1>
     </div>
     <div class="col-12 d-flex justify-content-between">
-      <div><b>Popular</b> products purchased</div>
+      <div><b>{% trans 'Popular' %}</b> {% trans 'products purchased' %}</div>
     </div>
     <hr>
   </div>
@@ -18,7 +19,7 @@
     <div class="row">
       <div class="album py-5">
         {% if not products %}
-        <div class="col-12">There are currently no products active <a href="{% url 'catalogue:catalogue_home' %}">Home</a></div>
+        <div class="col-12">{% trans 'There are currently no products active' %} <a href="{% url 'catalogue:catalogue_home' %}">{% trans 'Home' %}</a></div>
           {% else %}
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
           {% for product in products %}

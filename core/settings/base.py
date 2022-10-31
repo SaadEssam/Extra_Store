@@ -110,6 +110,7 @@ LANGUAGES = (
     ('ar', _('arabic')),
 )
 
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
