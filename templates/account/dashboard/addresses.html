@@ -1,10 +1,11 @@
 {% extends "../sub_base.html" %}
-{% block title %}Edit Addresses{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Edit Addresses' %}{% endblock %}
 
 
 {% block sub_content %}
-<h1 class="h2">Your Addresses</h1>
-<div>Manage your <b>addresses</b> and delivery preferences</div>
+<h1 class="h2">{% trans 'Your Addresses' %}</h1>
+<div>{% trans 'Manage your ' %}<b>{% trans 'addresses' %}</b>{% trans  'and delivery preferences' %}</div>
 <hr />
 <div class="container px-0">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -20,7 +21,7 @@
                   <path
                     d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                 </svg>
-                <h1 class="h5">Add Address</h1>
+                <h1 class="h5">{% trans 'Add Address' %}</h1>
               </div>
             </div>
           </div>

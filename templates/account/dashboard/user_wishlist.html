@@ -1,10 +1,11 @@
 {% extends "../sub_base.html" %}
-{% block title %}Wishlist{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Wishlist' %}{% endblock %}
 
 {% block sub_content %}
 <div class="col-12 mx-auto">
-  <h1 class="h3">My Wishlist</h1>
-  <div>Manage Your Wishlist</div>
+  <h1 class="h3">{% trans 'My Wishlist' %}</h1>
+  <div>{% trans 'Manage Your Wishlist' %}</div>
   <hr />
 
 {% if wishlist %}
@@ -25,7 +26,7 @@
             <p class="card-text">{{ product.description }}</p>
             <p class="card-text"><small class="text-muted">${{ product.regular_price }}</small></p>
             <div class="">
-              <label for="select">Qty</label>
+              <label for="select">{% trans 'Qty' %}</label>
               <select id="select" class="h6 store-select-dropdown">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -39,7 +40,7 @@
               value="{{product.id}}"
               class="btn btn-success fw500 btn-sm"
               >
-              Add to basket
+              {% trans 'Add to basket' %}
             </button>
             <a type="button" class="btn btn-danger fw500 btn-sm" href="{% url 'account:user_wishlist' product.id %}">Remove from Wishlist</a>
           </div>
@@ -48,7 +49,7 @@
     </div>
   {% endfor %}
 {% else %}
-  <p class="card-text">No products have been added to your wishlist yet.</p>
+  <p class="card-text">{% trans 'No products have been added to your wishlist yet.' %}</p>
 {% endif %}
 
 </div>

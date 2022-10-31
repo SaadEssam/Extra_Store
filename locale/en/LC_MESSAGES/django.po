@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-31 16:40+0200\n"
+"POT-Creation-Date: 2022-10-31 17:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -268,6 +268,129 @@ msgstr ""
 msgid "arabic"
 msgstr ""
 
+#: .\templates\account\dashboard\addresses.html:3
+msgid "Edit Addresses"
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:7
+#: .\templates\account\dashboard\dashboard.html:70
+msgid "Your Addresses"
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:8
+#: .\templates\account\dashboard\dashboard.html:11
+#: .\templates\account\dashboard\user_orders.html:11
+msgid "Manage your "
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:8
+msgid "addresses"
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:8
+msgid "and delivery preferences"
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:24
+msgid "Add Address"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:3
+#: .\templates\payment\error.html:11
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:8 .\templates\base.html:114
+#: .\templates\base.html:163
+msgid "Your Account"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:11
+#: .\templates\account\dashboard\user_orders.html:11
+msgid "orders"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:11
+#: .\templates\account\dashboard\user_orders.html:11
+msgid " and personal details"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:31 .\templates\base.html:115
+msgid "Orders"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:32
+msgid "View, Track, Change or buy again"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:51
+msgid "Login & Security"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:52
+msgid "Edit login, email and phone number"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:71
+msgid "Edit your shipping addresses"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:90
+#: .\templates\catalogue\single.html:15
+msgid "Your Wishlist"
+msgstr ""
+
+#: .\templates\account\dashboard\dashboard.html:91
+msgid "View your Wishlist"
+msgstr ""
+
+#: .\templates\account\dashboard\user_orders.html:3
+#: .\templates\account\dashboard\user_orders.html:8
+msgid "User Orders"
+msgstr ""
+
+#: .\templates\account\dashboard\user_orders.html:22
+msgid "Dispacted to"
+msgstr ""
+
+#: .\templates\account\dashboard\user_orders.html:36
+msgid "Total paid: "
+msgstr ""
+
+#: .\templates\account\dashboard\user_orders.html:41
+msgid "Problem with order"
+msgstr ""
+
+#: .\templates\account\dashboard\user_orders.html:42
+msgid "Leave a review"
+msgstr ""
+
+#: .\templates\account\dashboard\user_wishlist.html:3
+msgid "Wishlist"
+msgstr ""
+
+#: .\templates\account\dashboard\user_wishlist.html:7
+msgid "My Wishlist"
+msgstr ""
+
+#: .\templates\account\dashboard\user_wishlist.html:8
+msgid "Manage Your Wishlist"
+msgstr ""
+
+#: .\templates\account\dashboard\user_wishlist.html:29
+#: .\templates\catalogue\single.html:29
+msgid "Qty"
+msgstr ""
+
+#: .\templates\account\dashboard\user_wishlist.html:43
+#: .\templates\catalogue\single.html:45
+msgid "Add to basket"
+msgstr ""
+
+#: .\templates\account\dashboard\user_wishlist.html:52
+msgid "No products have been added to your wishlist yet."
+msgstr ""
+
 #: .\templates\account\password_reset\password_reset_email.html:2
 #, python-format
 msgid ""
@@ -318,14 +441,6 @@ msgstr ""
 msgid "My Account"
 msgstr ""
 
-#: .\templates\base.html:114 .\templates\base.html:163
-msgid "Your Account"
-msgstr ""
-
-#: .\templates\base.html:115
-msgid "Orders"
-msgstr ""
-
 #: .\templates\base.html:116 .\templates\base.html:165
 msgid "Logout"
 msgstr ""
@@ -374,40 +489,24 @@ msgstr ""
 msgid "All Books"
 msgstr ""
 
-#: .\templates\catalogue\single.html:15
-msgid "Your Wishlist"
-msgstr ""
-
 #: .\templates\catalogue\single.html:26
 msgid "includes tax"
-msgstr ""
-
-#: .\templates\catalogue\single.html:29
-msgid "Qty"
-msgstr ""
-
-#: .\templates\catalogue\single.html:45
-msgid "Add to basket"
 msgstr ""
 
 #: .\templates\catalogue\single.html:48
 msgid "Add to Wishlist"
 msgstr ""
 
-#: .\templates\payment\error.html:2
+#: .\templates\payment\error.html:3
 msgid "Error"
 msgstr ""
 
-#: .\templates\payment\error.html:8
+#: .\templates\payment\error.html:9
 msgid "Order Error"
 msgstr ""
 
-#: .\templates\payment\error.html:9
-msgid "Please Contact our customer support team."
-msgstr ""
-
 #: .\templates\payment\error.html:10
-msgid "Dashboard"
+msgid "Please Contact our customer support team."
 msgstr ""
 
 #: .\venv\Lib\site-packages\_pytest\config\argparsing.py:474

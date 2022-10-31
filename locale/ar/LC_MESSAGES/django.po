@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-31 16:40+0200\n"
-"PO-Revision-Date: 2022-10-31 16:41+0000\n"
+"POT-Creation-Date: 2022-10-31 17:17+0200\n"
+"PO-Revision-Date: 2022-10-31 17:19+0000\n"
 "Last-Translator: Anonymous User <t@t.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -269,6 +269,132 @@ msgstr "اللغة الانجليزية"
 msgid "arabic"
 msgstr "اللغة العربية"
 
+#: .\templates\account\dashboard\addresses.html:3
+msgid "Edit Addresses"
+msgstr "عناوينك"
+
+#: .\templates\account\dashboard\addresses.html:7
+#: .\templates\account\dashboard\dashboard.html:70
+msgid "Your Addresses"
+msgstr "عناوينك"
+
+#: .\templates\account\dashboard\addresses.html:8
+#: .\templates\account\dashboard\dashboard.html:11
+#: .\templates\account\dashboard\user_orders.html:11
+msgid "Manage your "
+msgstr "أدر "
+
+#: .\templates\account\dashboard\addresses.html:8
+msgid "addresses"
+msgstr "عناوينك "
+
+#: .\templates\account\dashboard\addresses.html:8
+msgid "and delivery preferences"
+msgstr "و معلومات التوصيل"
+
+#: .\templates\account\dashboard\addresses.html:24
+msgid "Add Address"
+msgstr "إضافة عنوان"
+
+#: .\templates\account\dashboard\dashboard.html:3
+#: .\templates\payment\error.html:11
+msgid "Dashboard"
+msgstr "الحساب الخاص بك"
+
+#: .\templates\account\dashboard\dashboard.html:8 .\templates\base.html:114
+#: .\templates\base.html:163
+msgid "Your Account"
+msgstr "الحساب الخاص بك"
+
+#: .\templates\account\dashboard\dashboard.html:11
+#: .\templates\account\dashboard\user_orders.html:11
+msgid "orders"
+msgstr "الطلبات الخاصة بك "
+
+#: .\templates\account\dashboard\dashboard.html:11
+#: .\templates\account\dashboard\user_orders.html:11
+msgid " and personal details"
+msgstr "و معلوماتك الخاصة"
+
+#: .\templates\account\dashboard\dashboard.html:31 .\templates\base.html:115
+msgid "Orders"
+msgstr "الطلبات الخاصة بك"
+
+#: .\templates\account\dashboard\dashboard.html:32
+msgid "View, Track, Change or buy again"
+msgstr "تتبع الأشياء أو إرجاعها أو شراؤها مرة أخرى"
+
+#: .\templates\account\dashboard\dashboard.html:51
+msgid "Login & Security"
+msgstr "تسجيل الدخول والأمان"
+
+#: .\templates\account\dashboard\dashboard.html:52
+msgid "Edit login, email and phone number"
+msgstr "تعديل تسجيل الدخول والايميل ورقم الجوال"
+
+#: .\templates\account\dashboard\dashboard.html:71
+msgid "Edit your shipping addresses"
+msgstr "تعديل عناوين الطلبات"
+
+#: .\templates\account\dashboard\dashboard.html:90
+#: .\templates\catalogue\single.html:15
+msgid "Your Wishlist"
+msgstr "قائمتك"
+
+#: .\templates\account\dashboard\dashboard.html:91
+msgid "View your Wishlist"
+msgstr "عرض قائمتك"
+
+#: .\templates\account\dashboard\user_orders.html:3
+#: .\templates\account\dashboard\user_orders.html:8
+msgid "User Orders"
+msgstr "الطلبات الخاصة بك"
+
+#: .\templates\account\dashboard\user_orders.html:22
+msgid "Dispacted to"
+msgstr "تاريخ التعديل"
+
+#: .\templates\account\dashboard\user_orders.html:36
+msgid "Total paid: "
+msgstr "الاجمالي : "
+
+#: .\templates\account\dashboard\user_orders.html:41
+msgid "Problem with order"
+msgstr "هناك مشكلة ؟"
+
+#: .\templates\account\dashboard\user_orders.html:42
+msgid "Leave a review"
+msgstr "اترك تقيم "
+
+#: .\templates\account\dashboard\user_wishlist.html:3
+#| msgid "Your Wishlist"
+msgid "Wishlist"
+msgstr "قائمتك"
+
+#: .\templates\account\dashboard\user_wishlist.html:7
+#| msgid "Your Wishlist"
+msgid "My Wishlist"
+msgstr "قائمتك"
+
+#: .\templates\account\dashboard\user_wishlist.html:8
+#| msgid "Your Wishlist"
+msgid "Manage Your Wishlist"
+msgstr "عرض قوائمك وتعديلها"
+
+#: .\templates\account\dashboard\user_wishlist.html:29
+#: .\templates\catalogue\single.html:29
+msgid "Qty"
+msgstr "الكمية"
+
+#: .\templates\account\dashboard\user_wishlist.html:43
+#: .\templates\catalogue\single.html:45
+msgid "Add to basket"
+msgstr "أضف إلى السلة"
+
+#: .\templates\account\dashboard\user_wishlist.html:52
+msgid "No products have been added to your wishlist yet."
+msgstr ".لم يتم إضافة أي منتجات إلى قائمتك حتى الآن "
+
 #: .\templates\account\password_reset\password_reset_email.html:2
 #, python-format
 msgid ""
@@ -319,14 +445,6 @@ msgstr "الحساب و القوائم"
 msgid "My Account"
 msgstr "الحساب"
 
-#: .\templates\base.html:114 .\templates\base.html:163
-msgid "Your Account"
-msgstr "الحساب"
-
-#: .\templates\base.html:115
-msgid "Orders"
-msgstr "مشترياتك"
-
 #: .\templates\base.html:116 .\templates\base.html:165
 msgid "Logout"
 msgstr "تسجيل خروج"
@@ -375,41 +493,25 @@ msgstr "! سجل الان"
 msgid "All Books"
 msgstr "جميع الكتب"
 
-#: .\templates\catalogue\single.html:15
-msgid "Your Wishlist"
-msgstr "قائمتك"
-
 #: .\templates\catalogue\single.html:26
 msgid "includes tax"
 msgstr "شامل الضريبة"
-
-#: .\templates\catalogue\single.html:29
-msgid "Qty"
-msgstr "الكمية"
-
-#: .\templates\catalogue\single.html:45
-msgid "Add to basket"
-msgstr "أضف إلى العربة"
 
 #: .\templates\catalogue\single.html:48
 msgid "Add to Wishlist"
 msgstr "أضف إلى القائمة"
 
-#: .\templates\payment\error.html:2
+#: .\templates\payment\error.html:3
 msgid "Error"
 msgstr "خطأ !"
 
-#: .\templates\payment\error.html:8
+#: .\templates\payment\error.html:9
 msgid "Order Error"
 msgstr ""
 
-#: .\templates\payment\error.html:9
+#: .\templates\payment\error.html:10
 msgid "Please Contact our customer support team."
 msgstr "الرجاء التواصل مع فريق الدعم الفني."
-
-#: .\templates\payment\error.html:10
-msgid "Dashboard"
-msgstr "الحساب الخاص بك"
 
 #: .\venv\Lib\site-packages\_pytest\config\argparsing.py:474
 #, python-format

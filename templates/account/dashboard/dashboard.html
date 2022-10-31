@@ -1,14 +1,15 @@
 {% extends "../sub_base.html" %}
-{% block title %}Dashboard{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Dashboard' %}{% endblock %}
 
 {% block sub_content %}
 
   <div class="col-12">
-    <h1 class="h2">Your Account</h1>
+    <h1 class="h2">{% trans 'Your Account' %}</h1>
   </div>
   <div class="col-12 d-flex justify-content-between">
-    <div>Manage your <b>orders</b> and personal details</div>
-    {% comment %} <div><a href="{% url 'account:edit_details' %}">Change Details</a></div> {% endcomment %}
+    <div>{% trans 'Manage your ' %}<b>{% trans 'orders' %}</b>{% trans ' and personal details' %}</div>
+    {% comment %} <div><a href="{% url 'account:edit_details' %}">{% trans 'Change Details' %}</a></div> {% endcomment %}
   </div>
   <hr />
 
@@ -26,8 +27,8 @@
           </div>
           <div class="col-10">
             <div class="card-body ps-0 ps-md-1">
-              <h1 class="h5">Orders</h1>
-              <p class="card-text small text-muted">View, Track, Change or buy again</p>
+              <h1 class="h5">{% trans 'Orders' %}</h1>
+              <p class="card-text small text-muted">{% trans 'View, Track, Change or buy again' %}</p>
             </div>
           </div>
         </div>
@@ -46,8 +47,8 @@
           </div>
           <div class="col-10">
             <div class="card-body ps-0 ps-md-1">
-              <h1 class="h5">Login & Security</h1>
-              <p class="card-text small text-muted">Edit login, email and phone number</p>
+              <h1 class="h5">{% trans 'Login & Security' %}</h1>
+              <p class="card-text small text-muted">{% trans 'Edit login, email and phone number' %}</p>
             </div>
           </div>
         </div>
@@ -65,8 +66,8 @@
           </div>
           <div class="col-10">
             <div class="card-body ps-0 ps-md-1">
-              <h1 class="h5">Your Addresses</h1>
-              <p class="card-text small text-muted">Edit your shipping addresses</p>
+              <h1 class="h5">{% trans 'Your Addresses' %}</h1>
+              <p class="card-text small text-muted">{% trans 'Edit your shipping addresses' %}</p>
             </div>
           </div>
         </div>
@@ -85,8 +86,8 @@
           </div>
           <div class="col-10">
             <div class="card-body ps-0 ps-md-1">
-              <h1 class="h5">Your Wishlist</h1>
-              <p class="card-text small text-muted">View your Wishlist</p>
+              <h1 class="h5">{% trans 'Your Wishlist' %}</h1>
+              <p class="card-text small text-muted">{% trans 'View your Wishlist' %}</p>
             </div>
           </div>
         </div>
