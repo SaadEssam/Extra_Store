@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-31 17:17+0200\n"
-"PO-Revision-Date: 2022-10-31 17:19+0000\n"
+"POT-Creation-Date: 2022-11-02 13:59+0200\n"
+"PO-Revision-Date: 2022-11-02 14:08+0000\n"
 "Last-Translator: Anonymous User <t@t.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -239,27 +239,27 @@ msgstr ""
 
 #: .\core\apps\checkout\models.py:21
 msgid "list order"
-msgstr ""
+msgstr "ترتيب القائمة"
 
 #: .\core\apps\checkout\models.py:25
 msgid "Delivery Option"
-msgstr ""
+msgstr "خيارات التوصيل"
 
 #: .\core\apps\checkout\models.py:26
 msgid "Delivery Options"
-msgstr ""
+msgstr "خيارات التوصيل"
 
 #: .\core\apps\checkout\models.py:32
 msgid "name"
-msgstr ""
+msgstr "الاسم "
 
 #: .\core\apps\checkout\models.py:36
 msgid "Payment Selection"
-msgstr ""
+msgstr "اختيار طريقة الدفع"
 
 #: .\core\apps\checkout\models.py:37
 msgid "Payment Selections"
-msgstr ""
+msgstr "اختيار طرق الدفع"
 
 #: .\core\settings\base.py:109
 msgid "English"
@@ -367,17 +367,14 @@ msgid "Leave a review"
 msgstr "اترك تقيم "
 
 #: .\templates\account\dashboard\user_wishlist.html:3
-#| msgid "Your Wishlist"
 msgid "Wishlist"
 msgstr "قائمتك"
 
 #: .\templates\account\dashboard\user_wishlist.html:7
-#| msgid "Your Wishlist"
 msgid "My Wishlist"
 msgstr "قائمتك"
 
 #: .\templates\account\dashboard\user_wishlist.html:8
-#| msgid "Your Wishlist"
 msgid "Manage Your Wishlist"
 msgstr "عرض قوائمك وتعديلها"
 
@@ -395,20 +392,46 @@ msgstr "أضف إلى السلة"
 msgid "No products have been added to your wishlist yet."
 msgstr ".لم يتم إضافة أي منتجات إلى قائمتك حتى الآن "
 
+#: .\templates\account\login.html:3 .\templates\base.html:101
+#: .\templates\base.html:118 .\templates\base.html:167
+msgid "Login"
+msgstr "تسجيل دخول"
+
+#: .\templates\account\login.html:10 .\templates\account\login.html:22
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#: .\templates\account\login.html:13
+msgid "Error: Username or Password not correct!"
+msgstr "خطأ : اسم المستخدم او كلمة المرور خطأ"
+
+#: .\templates\account\login.html:25
+#: .\templates\account\registration\register.html:10
+#, fuzzy
+#| msgid "Make an account"
+msgid "Create an account"
+msgstr "! سجل الان"
+
+#: .\templates\account\login.html:26
+msgid "Forgotten Password?"
+msgstr "نسيت كلمة المرور ؟"
+
 #: .\templates\account\password_reset\password_reset_email.html:2
 #, python-format
 msgid ""
 "You're receiving this email because you requested a password reset for your "
 "user account at %(site_name)s."
 msgstr ""
+"أنت تتلقى هذا البريد الإلكتروني لأنك طلبت إعادة تعيين كلمة المرور لحساب "
+"المستخدم الخاص بك على %(site_name)s."
 
 #: .\templates\account\password_reset\password_reset_email.html:4
 msgid "Please go to the following page and choose a new password:"
-msgstr ""
+msgstr "الرجاء الانتقال إلى الصفحة التالية واختيار كلمة مرور جديدة:"
 
 #: .\templates\account\password_reset\password_reset_email.html:8
 msgid "Your username, in case you’ve forgotten:"
-msgstr ""
+msgstr "اسم المستخدم الخاص بك ، في حال نسيت:"
 
 #: .\templates\account\password_reset\password_reset_email.html:10
 msgid "Thanks for using our site!"
@@ -417,7 +440,76 @@ msgstr "شكرا لاستخدامك موقعنا"
 #: .\templates\account\password_reset\password_reset_email.html:12
 #, python-format
 msgid "The %(site_name)s team"
-msgstr ""
+msgstr "فريق %(site_name)s"
+
+#: .\templates\account\registration\account_activation_email.html:2
+msgid "Hi"
+msgstr "مرحبا"
+
+#: .\templates\account\registration\account_activation_email.html:4
+msgid ""
+"Your account has been successfully created. Please click below link to "
+"activate your account."
+msgstr "تم إنشاء حسابك بنجاح. الرجاء الضغط على الرابط أدناه لتفعيل حسابك."
+
+#: .\templates\account\registration\activation_invalid.html:3
+msgid "Invalid Activation"
+msgstr "خطأ في التفعيل"
+
+#: .\templates\account\registration\activation_invalid.html:8
+#: .\templates\payment\error.html:3
+msgid "Error"
+msgstr "خطأ !"
+
+#: .\templates\account\registration\activation_invalid.html:9
+#, fuzzy
+#| msgid "Please Contact our customer support team."
+msgid "Please contact our support team"
+msgstr "الرجاء التواصل مع فريق الدعم الفني."
+
+#: .\templates\account\registration\register.html:3
+#: .\templates\account\registration\register_email_confirm.html:3
+#| msgid "Your Account"
+msgid "Register Account"
+msgstr "تسجيل حساب"
+
+#: .\templates\account\registration\register.html:11
+msgid "It's free and only takes a minute."
+msgstr "إنه مجاني ولا يستغرق سوى بضع دقائق"
+
+#: .\templates\account\registration\register.html:14
+msgid "Please correct the following errors:"
+msgstr "الرجاء تصحيح الأخطاء التالية:"
+
+#: .\templates\account\registration\register.html:24
+#: .\templates\account\registration\register.html:26
+#: .\templates\account\registration\register.html:31
+#, fuzzy
+#| msgid "Required"
+msgid "(Required)"
+msgstr "مطلوب"
+
+#: .\templates\account\registration\register.html:29
+msgid "At least 8 characters and 1 digit"
+msgstr "ما لا يقل عن 8 أحرف ورقم واحد"
+
+#: .\templates\account\registration\register.html:33
+msgid "Register"
+msgstr "تسجيل"
+
+#: .\templates\account\registration\register.html:35
+#| msgid "Make an account"
+msgid "Already have an account?"
+msgstr "بالفعل لديك حساب ؟"
+
+#: .\templates\account\registration\register_email_confirm.html:8
+#| msgid "Account &amp; Lists"
+msgid "Account email sent"
+msgstr "تم إرسال البريد الإلكتروني للحساب"
+
+#: .\templates\account\registration\register_email_confirm.html:9
+msgid "Check your email to activate your account"
+msgstr "تحقق من بريدك الإلكتروني لتفعيل حسابك"
 
 #: .\templates\base.html:7 .\templates\base.html:33
 #: .\templates\catalogue\index.html:5
@@ -431,11 +523,6 @@ msgstr "جميع الاقسام"
 #: .\templates\base.html:97
 msgid "Hello,"
 msgstr ":مرحبا"
-
-#: .\templates\base.html:101 .\templates\base.html:118
-#: .\templates\base.html:167
-msgid "Login"
-msgstr "تسجيل دخول"
 
 #: .\templates\base.html:104
 msgid "Account &amp; Lists"
@@ -501,13 +588,9 @@ msgstr "شامل الضريبة"
 msgid "Add to Wishlist"
 msgstr "أضف إلى القائمة"
 
-#: .\templates\payment\error.html:3
-msgid "Error"
-msgstr "خطأ !"
-
 #: .\templates\payment\error.html:9
 msgid "Order Error"
-msgstr ""
+msgstr "خطأ في الطلب"
 
 #: .\templates\payment\error.html:10
 msgid "Please Contact our customer support team."

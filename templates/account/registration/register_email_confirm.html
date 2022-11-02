@@ -1,11 +1,12 @@
 {% extends '../sub_base.html' %}
-{% block title %}Register Account{% endblock %}
+{% load i8n %}
+{% block title %}{% trans 'Register Account' %}{% endblock %}
 {% block content %}
 
 <div class="container">
   <div>
-    <h3 class="mb-4">Account email sent</h3>
-    <p>Check your email to activate your account</p>
+    <h3 class="mb-4">{% trans 'Account email sent' %}</h3>
+    <p>{% trans 'Check your email to activate your account' %}</p>
   </div>
 </div>
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-31 17:17+0200\n"
+"POT-Creation-Date: 2022-11-02 13:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -391,6 +391,28 @@ msgstr ""
 msgid "No products have been added to your wishlist yet."
 msgstr ""
 
+#: .\templates\account\login.html:3 .\templates\base.html:101
+#: .\templates\base.html:118 .\templates\base.html:167
+msgid "Login"
+msgstr ""
+
+#: .\templates\account\login.html:10 .\templates\account\login.html:22
+msgid "Sign In"
+msgstr ""
+
+#: .\templates\account\login.html:13
+msgid "Error: Username or Password not correct!"
+msgstr ""
+
+#: .\templates\account\login.html:25
+#: .\templates\account\registration\register.html:10
+msgid "Create an account"
+msgstr ""
+
+#: .\templates\account\login.html:26
+msgid "Forgotten Password?"
+msgstr ""
+
 #: .\templates\account\password_reset\password_reset_email.html:2
 #, python-format
 msgid ""
@@ -415,6 +437,68 @@ msgstr ""
 msgid "The %(site_name)s team"
 msgstr ""
 
+#: .\templates\account\registration\account_activation_email.html:2
+msgid "Hi"
+msgstr ""
+
+#: .\templates\account\registration\account_activation_email.html:4
+msgid ""
+"Your account has been successfully created. Please click below link to "
+"activate your account."
+msgstr ""
+
+#: .\templates\account\registration\activation_invalid.html:3
+msgid "Invalid Activation"
+msgstr ""
+
+#: .\templates\account\registration\activation_invalid.html:8
+#: .\templates\payment\error.html:3
+msgid "Error"
+msgstr ""
+
+#: .\templates\account\registration\activation_invalid.html:9
+msgid "Please contact our support team"
+msgstr ""
+
+#: .\templates\account\registration\register.html:3
+#: .\templates\account\registration\register_email_confirm.html:3
+msgid "Register Account"
+msgstr ""
+
+#: .\templates\account\registration\register.html:11
+msgid "It's free and only takes a minute."
+msgstr ""
+
+#: .\templates\account\registration\register.html:14
+msgid "Please correct the following errors:"
+msgstr ""
+
+#: .\templates\account\registration\register.html:24
+#: .\templates\account\registration\register.html:26
+#: .\templates\account\registration\register.html:31
+msgid "(Required)"
+msgstr ""
+
+#: .\templates\account\registration\register.html:29
+msgid "At least 8 characters and 1 digit"
+msgstr ""
+
+#: .\templates\account\registration\register.html:33
+msgid "Register"
+msgstr ""
+
+#: .\templates\account\registration\register.html:35
+msgid "Already have an account?"
+msgstr ""
+
+#: .\templates\account\registration\register_email_confirm.html:8
+msgid "Account email sent"
+msgstr ""
+
+#: .\templates\account\registration\register_email_confirm.html:9
+msgid "Check your email to activate your account"
+msgstr ""
+
 #: .\templates\base.html:7 .\templates\base.html:33
 #: .\templates\catalogue\index.html:5
 msgid "Extra Store"
@@ -426,11 +510,6 @@ msgstr ""
 
 #: .\templates\base.html:97
 msgid "Hello,"
-msgstr ""
-
-#: .\templates\base.html:101 .\templates\base.html:118
-#: .\templates\base.html:167
-msgid "Login"
 msgstr ""
 
 #: .\templates\base.html:104
@@ -495,10 +574,6 @@ msgstr ""
 
 #: .\templates\catalogue\single.html:48
 msgid "Add to Wishlist"
-msgstr ""
-
-#: .\templates\payment\error.html:3
-msgid "Error"
 msgstr ""
 
 #: .\templates\payment\error.html:9
