@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 15:11+0200\n"
+"POT-Creation-Date: 2022-11-02 15:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -281,6 +281,7 @@ msgstr ""
 #: .\templates\account\dashboard\addresses.html:8
 #: .\templates\account\dashboard\dashboard.html:11
 #: .\templates\account\dashboard\user_orders.html:11
+#: .\templates\basket\summary.html:14
 msgid "Manage your "
 msgstr ""
 
@@ -308,6 +309,7 @@ msgstr ""
 
 #: .\templates\account\dashboard\addresses.html:50
 #: .\templates\account\dashboard\edit_details.html:41
+#: .\templates\basket\summary.html:83
 #: .\venv\Lib\site-packages\django\forms\formsets.py:496
 msgid "Delete"
 msgstr ""
@@ -456,7 +458,7 @@ msgid "Manage Your Wishlist"
 msgstr ""
 
 #: .\templates\account\dashboard\user_wishlist.html:29
-#: .\templates\catalogue\single.html:29
+#: .\templates\basket\summary.html:74 .\templates\catalogue\single.html:29
 msgid "Qty"
 msgstr ""
 
@@ -673,6 +675,76 @@ msgstr ""
 
 #: .\templates\base.html:147
 msgid "Basket"
+msgstr ""
+
+#: .\templates\basket\summary.html:4
+msgid "Basket Summary"
+msgstr ""
+
+#: .\templates\basket\summary.html:11
+msgid "Your Basket"
+msgstr ""
+
+#: .\templates\basket\summary.html:14
+msgid "items"
+msgstr ""
+
+#: .\templates\basket\summary.html:14
+msgid " in your basket"
+msgstr ""
+
+#: .\templates\basket\summary.html:22
+msgid "Your basket is empty "
+msgstr ""
+
+#: .\templates\basket\summary.html:22
+msgid "Store"
+msgstr ""
+
+#: .\templates\basket\summary.html:26
+#: .\venv\Lib\site-packages\django\forms\formsets.py:483
+#: .\venv\Lib\site-packages\django\forms\formsets.py:490
+msgid "Order"
+msgstr ""
+
+#: .\templates\basket\summary.html:29
+msgid "Shipping options"
+msgstr ""
+
+#: .\templates\basket\summary.html:36
+msgid "Next day delivery"
+msgstr ""
+
+#: .\templates\basket\summary.html:37
+msgid "Premium delivery"
+msgstr ""
+
+#: .\templates\basket\summary.html:43
+msgid "Sub Total: "
+msgstr ""
+
+#: .\templates\basket\summary.html:44
+msgid "Shipping "
+msgstr ""
+
+#: .\templates\basket\summary.html:44
+msgid "(Next day delivery)"
+msgstr ""
+
+#: .\templates\basket\summary.html:45
+msgid "Total to pay: "
+msgstr ""
+
+#: .\templates\basket\summary.html:51
+msgid "Checkout"
+msgstr ""
+
+#: .\templates\basket\summary.html:52
+msgid "Save for later"
+msgstr ""
+
+#: .\templates\basket\summary.html:82
+msgid "Update"
 msgstr ""
 
 #: .\templates\catalogue\category.html:14
@@ -1301,11 +1373,6 @@ msgid "Please submit at least %(num)d form."
 msgid_plural "Please submit at least %(num)d forms."
 msgstr[0] ""
 msgstr[1] ""
-
-#: .\venv\Lib\site-packages\django\forms\formsets.py:483
-#: .\venv\Lib\site-packages\django\forms\formsets.py:490
-msgid "Order"
-msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:892
 #, python-format

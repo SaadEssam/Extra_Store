@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 15:11+0200\n"
-"PO-Revision-Date: 2022-11-02 15:15+0000\n"
+"POT-Creation-Date: 2022-11-02 15:23+0200\n"
+"PO-Revision-Date: 2022-11-02 15:27+0000\n"
 "Last-Translator: Anonymous User <t@t.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -282,6 +282,7 @@ msgstr "عناوينك"
 #: .\templates\account\dashboard\addresses.html:8
 #: .\templates\account\dashboard\dashboard.html:11
 #: .\templates\account\dashboard\user_orders.html:11
+#: .\templates\basket\summary.html:14
 msgid "Manage your "
 msgstr "أدر "
 
@@ -311,12 +312,12 @@ msgstr "تعديل "
 
 #: .\templates\account\dashboard\addresses.html:50
 #: .\templates\account\dashboard\edit_details.html:41
+#: .\templates\basket\summary.html:83
 #: .\venv\Lib\site-packages\django\forms\formsets.py:496
 msgid "Delete"
 msgstr "حذف"
 
 #: .\templates\account\dashboard\addresses.html:52
-#| msgid "Default"
 msgid "Set Default"
 msgstr "تعيين كأساسي"
 
@@ -372,7 +373,6 @@ msgstr "عرض قائمتك"
 #: .\templates\account\dashboard\delete_confirm.html:3
 #: .\templates\account\dashboard\delete_confirm.html:9
 #: .\templates\account\dashboard\edit_details.html:38
-#| msgid "Register Account"
 msgid "Delete Account"
 msgstr "حذف الحساب"
 
@@ -381,7 +381,6 @@ msgid "You have now deleted your account"
 msgstr "لقد قمت الآن بحذف حسابك"
 
 #: .\templates\account\dashboard\edit_addresses.html:7
-#| msgid "Edit Addresses"
 msgid "Create/Edit Address"
 msgstr "إضافة/ تعديل العنوان"
 
@@ -390,7 +389,6 @@ msgid "Add a new delivery "
 msgstr "أضف تسليمًا جديدًا"
 
 #: .\templates\account\dashboard\edit_addresses.html:8
-#| msgid "addresses"
 msgid "address"
 msgstr "عنوان"
 
@@ -410,12 +408,10 @@ msgid "Details successfully updated!"
 msgstr "تم تحديث التفاصيل بنجاح!"
 
 #: .\templates\account\dashboard\edit_details.html:14
-#| msgid "Dashboard"
 msgid "Back to Dashboard"
 msgstr "الرجوع إلى حسابك"
 
 #: .\templates\account\dashboard\edit_details.html:17
-#| msgid "Change your password"
 msgid "Change your details"
 msgstr "تغيير التفاصيل الخاصة بك"
 
@@ -465,7 +461,7 @@ msgid "Manage Your Wishlist"
 msgstr "عرض قوائمك وتعديلها"
 
 #: .\templates\account\dashboard\user_wishlist.html:29
-#: .\templates\catalogue\single.html:29
+#: .\templates\basket\summary.html:74 .\templates\catalogue\single.html:29
 msgid "Qty"
 msgstr "الكمية"
 
@@ -691,6 +687,86 @@ msgstr "تسجيل خروج"
 #: .\templates\base.html:147
 msgid "Basket"
 msgstr "السلة"
+
+#: .\templates\basket\summary.html:4
+#| msgid "Basket"
+msgid "Basket Summary"
+msgstr "ملخص السلة"
+
+#: .\templates\basket\summary.html:11
+#| msgid "Basket"
+msgid "Your Basket"
+msgstr "السلة"
+
+#: .\templates\basket\summary.html:14
+msgid "items"
+msgstr "منتجات"
+
+#: .\templates\basket\summary.html:14
+#, fuzzy
+#| msgid "Add to basket"
+msgid " in your basket"
+msgstr "أضف إلى السلة"
+
+#: .\templates\basket\summary.html:22
+msgid "Your basket is empty "
+msgstr "عربة التسوق فارغة"
+
+#: .\templates\basket\summary.html:22
+#, fuzzy
+#| msgid "Extra Store"
+msgid "Store"
+msgstr "إكسترا ستور"
+
+#: .\templates\basket\summary.html:26
+#: .\venv\Lib\site-packages\django\forms\formsets.py:483
+#: .\venv\Lib\site-packages\django\forms\formsets.py:490
+msgid "Order"
+msgstr "ترتيب"
+
+#: .\templates\basket\summary.html:29
+msgid "Shipping options"
+msgstr "خيارات الشحن"
+
+#: .\templates\basket\summary.html:36
+#| msgid "Add a new delivery "
+msgid "Next day delivery"
+msgstr "التسليم في اليوم التالي"
+
+#: .\templates\basket\summary.html:37
+msgid "Premium delivery"
+msgstr "توصيل بريميوم"
+
+#: .\templates\basket\summary.html:43
+#| msgid "Total paid: "
+msgid "Sub Total: "
+msgstr "المجموع الفرعي"
+
+#: .\templates\basket\summary.html:44
+msgid "Shipping "
+msgstr "شحن"
+
+#: .\templates\basket\summary.html:44
+msgid "(Next day delivery)"
+msgstr "التسليم في اليوم التالي"
+
+#: .\templates\basket\summary.html:45
+#| msgid "Total paid: "
+msgid "Total to pay: "
+msgstr "مجموع الدفع:"
+
+#: .\templates\basket\summary.html:51
+msgid "Checkout"
+msgstr "الدفع"
+
+#: .\templates\basket\summary.html:52
+msgid "Save for later"
+msgstr "حفظ في وقت لاحق"
+
+#: .\templates\basket\summary.html:82
+#| msgid "Updated at"
+msgid "Update"
+msgstr "تعديل"
 
 #: .\templates\catalogue\category.html:14
 msgid "Popular"
@@ -1320,11 +1396,6 @@ msgid "Please submit at least %(num)d form."
 msgid_plural "Please submit at least %(num)d forms."
 msgstr[0] ""
 msgstr[1] ""
-
-#: .\venv\Lib\site-packages\django\forms\formsets.py:483
-#: .\venv\Lib\site-packages\django\forms\formsets.py:490
-msgid "Order"
-msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:892
 #, python-format
