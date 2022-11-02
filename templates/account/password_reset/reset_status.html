@@ -1,5 +1,6 @@
 {% extends "../sub_base.html" %}
-{% block title %}Reset Status{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Reset Status' %}{% endblock %}
 {% block content %}
 
 
@@ -8,12 +9,12 @@
         <div class="col-12 col-lg-6">
             <div class="p-4">
                 {% if 'email' in request.get_full_path %}
-                        <h3 class="mb-4">Password Reset Success</h3>
-                        <p>Check your email for instructions</p>
+                        <h3 class="mb-4">{% trans 'Password Reset Success' %}</h3>
+                        <p>{% trans 'Check your email for instructions' %}</p>
                 {% endif%}
                 {% if 'complete' in request.get_full_path %}
-                        <h3 class="mb-4">Password Reset Success</h3>
-                        <a href="{% url 'account:login' %}">Login</a>
+                        <h3 class="mb-4">{% trans 'Password Reset Success' %}</h3>
+                        <a href="{% url 'account:login' %}">{% trans 'Login' %}</a>
                 {% endif%}
             </div>       
         </div>

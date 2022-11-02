@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 13:59+0200\n"
+"POT-Creation-Date: 2022-11-02 14:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -391,8 +391,11 @@ msgstr ""
 msgid "No products have been added to your wishlist yet."
 msgstr ""
 
-#: .\templates\account\login.html:3 .\templates\base.html:101
-#: .\templates\base.html:118 .\templates\base.html:167
+#: .\templates\account\login.html:3
+#: .\templates\account\password_reset\password_reset_form.html:26
+#: .\templates\account\password_reset\reset_status.html:17
+#: .\templates\base.html:101 .\templates\base.html:118
+#: .\templates\base.html:167
 msgid "Login"
 msgstr ""
 
@@ -411,6 +414,52 @@ msgstr ""
 
 #: .\templates\account\login.html:26
 msgid "Forgotten Password?"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:3
+msgid "Reset Password confirm"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:15
+msgid "Change your password"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:16
+msgid "Use the form below to change your password."
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:19
+#: .\templates\account\password_reset\password_reset_form.html:18
+msgid "Error: Please try again!"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:27
+msgid "Your password can’t be too similar to your other personal information."
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:28
+msgid "Your password must contain at least 8 characters."
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:29
+msgid "Your password can’t be a commonly used password."
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:30
+msgid "Your password can’t be entirely numeric."
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:34
+msgid "Submit"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:38
+#: .\templates\account\registration\register.html:35
+msgid "Already have an account?"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_confirm.html:39
+msgid "Help Center?"
 msgstr ""
 
 #: .\templates\account\password_reset\password_reset_email.html:2
@@ -435,6 +484,35 @@ msgstr ""
 #: .\templates\account\password_reset\password_reset_email.html:12
 #, python-format
 msgid "The %(site_name)s team"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_form.html:3
+msgid "Reset Password"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_form.html:14
+msgid "Forgotten your password?"
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_form.html:15
+msgid "Enter your e-mail address to obtain a new password."
+msgstr ""
+
+#: .\templates\account\password_reset\password_reset_form.html:25
+msgid "Send E-mail"
+msgstr ""
+
+#: .\templates\account\password_reset\reset_status.html:3
+msgid "Reset Status"
+msgstr ""
+
+#: .\templates\account\password_reset\reset_status.html:12
+#: .\templates\account\password_reset\reset_status.html:16
+msgid "Password Reset Success"
+msgstr ""
+
+#: .\templates\account\password_reset\reset_status.html:13
+msgid "Check your email for instructions"
 msgstr ""
 
 #: .\templates\account\registration\account_activation_email.html:2
@@ -485,10 +563,6 @@ msgstr ""
 
 #: .\templates\account\registration\register.html:33
 msgid "Register"
-msgstr ""
-
-#: .\templates\account\registration\register.html:35
-msgid "Already have an account?"
 msgstr ""
 
 #: .\templates\account\registration\register_email_confirm.html:8
