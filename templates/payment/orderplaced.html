@@ -1,13 +1,14 @@
 {% extends './sub_base.html' %}
-{% block title %}Order Placed{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Order Placed' %}{% endblock %}
 {% block content %}
 
 
 <div class="container">
   <div class="col-12 col-lg-6">
-    <h3 class="mb-4 pt-4">Order has been placed</h3>
-    <p>Check your email for confirmation</p>
-    <a href="{% url 'account:dashboard' %}">See orders</a>
+    <h3 class="mb-4 pt-4">{% trans 'Order has been placed' %}</h3>
+    <p>{% trans 'Check your email for confirmation' %}</p>
+    <a href="{% url 'account:dashboard' %}">{% trans 'See orders' %}</a>
   </div>
 </div>
 

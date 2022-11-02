@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 15:35+0200\n"
+"POT-Creation-Date: 2022-11-02 15:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Phone Number"
 msgstr ""
 
-#: .\core\apps\account\models.py:92
+#: .\core\apps\account\models.py:92 .\templates\payment\payment_form.html:60
 msgid "Postcode"
 msgstr ""
 
@@ -659,7 +659,7 @@ msgstr ""
 msgid "Extra Store"
 msgstr ""
 
-#: .\templates\base.html:39 .\templates\base.html:47
+#: .\templates\base.html:39 .\templates\base.html:47 .\templates\base.html:153
 msgid "All"
 msgstr ""
 
@@ -671,7 +671,7 @@ msgstr ""
 msgid "Account &amp; Lists"
 msgstr ""
 
-#: .\templates\base.html:111
+#: .\templates\base.html:111 .\templates\base.html:160
 msgid "My Account"
 msgstr ""
 
@@ -681,6 +681,10 @@ msgstr ""
 
 #: .\templates\base.html:147
 msgid "Basket"
+msgstr ""
+
+#: .\templates\base.html:175
+msgid "Search"
 msgstr ""
 
 #: .\templates\basket\summary.html:4
@@ -839,6 +843,7 @@ msgstr ""
 
 #: .\templates\checkout\delivery_address.html:38
 #: .\templates\checkout\delivery_choices.html:46
+#: .\templates\payment\payment_form.html:74
 msgid "Pay"
 msgstr ""
 
@@ -889,6 +894,101 @@ msgstr ""
 
 #: .\templates\payment\error.html:10
 msgid "Please Contact our customer support team."
+msgstr ""
+
+#: .\templates\payment\orderplaced.html:3
+msgid "Order Placed"
+msgstr ""
+
+#: .\templates\payment\orderplaced.html:9
+msgid "Order has been placed"
+msgstr ""
+
+#: .\templates\payment\orderplaced.html:10
+msgid "Check your email for confirmation"
+msgstr ""
+
+#: .\templates\payment\orderplaced.html:11
+msgid "See orders"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:4
+#: .\templates\payment\payment_form.html:68
+msgid "Payment"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:9
+msgid "Billing address"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:14
+msgid "Customer Name"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:17
+msgid "Valid first name is required."
+msgstr ""
+
+#: .\templates\payment\payment_form.html:21
+msgid "Email "
+msgstr ""
+
+#: .\templates\payment\payment_form.html:21
+#: .\templates\payment\payment_form.html:36
+msgid "(Optional)"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:24
+msgid "Please enter a valid email address for shipping updates."
+msgstr ""
+
+#: .\templates\payment\payment_form.html:28
+msgid "Address"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:31
+msgid "Please enter your shipping address."
+msgstr ""
+
+#: .\templates\payment\payment_form.html:35
+msgid "Address 2 "
+msgstr ""
+
+#: .\templates\payment\payment_form.html:40
+msgid "Country"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:42
+#: .\templates\payment\payment_form.html:52
+msgid "Choose..."
+msgstr ""
+
+#: .\templates\payment\payment_form.html:43
+msgid "United States"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:46
+msgid "Please select a valid country."
+msgstr ""
+
+#: .\templates\payment\payment_form.html:50
+msgid "State"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:53
+msgid "California"
+msgstr ""
+
+#: .\templates\payment\payment_form.html:56
+msgid "Please provide a valid state."
+msgstr ""
+
+#: .\templates\payment\payment_form.html:63
+msgid "Zip code required."
+msgstr ""
+
+#: .\templates\payment\payment_form.html:69
+msgid "Credit or debit card"
 msgstr ""
 
 #: .\venv\Lib\site-packages\_pytest\config\argparsing.py:474

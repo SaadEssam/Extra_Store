@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 15:35+0200\n"
-"PO-Revision-Date: 2022-11-02 15:41+0000\n"
+"POT-Creation-Date: 2022-11-02 15:48+0200\n"
+"PO-Revision-Date: 2022-11-02 15:55+0000\n"
 "Last-Translator: Anonymous User <t@t.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -47,7 +47,7 @@ msgstr "الاسم الكامل"
 msgid "Phone Number"
 msgstr "رقم الجوال"
 
-#: .\core\apps\account\models.py:92
+#: .\core\apps\account\models.py:92 .\templates\payment\payment_form.html:60
 msgid "Postcode"
 msgstr "الرقم البريدي"
 
@@ -306,7 +306,6 @@ msgstr "إضافة عنوان"
 
 #: .\templates\account\dashboard\addresses.html:46
 #: .\templates\checkout\delivery_address.html:61
-#| msgid "Phone Number"
 msgid "Phone number: "
 msgstr "رقم الجوال"
 
@@ -669,7 +668,7 @@ msgstr "تحقق من بريدك الإلكتروني لتفعيل حسابك"
 msgid "Extra Store"
 msgstr "إكسترا ستور"
 
-#: .\templates\base.html:39 .\templates\base.html:47
+#: .\templates\base.html:39 .\templates\base.html:47 .\templates\base.html:153
 msgid "All"
 msgstr "جميع الاقسام"
 
@@ -681,7 +680,7 @@ msgstr ":مرحبا"
 msgid "Account &amp; Lists"
 msgstr "الحساب و القوائم"
 
-#: .\templates\base.html:111
+#: .\templates\base.html:111 .\templates\base.html:160
 msgid "My Account"
 msgstr "الحساب"
 
@@ -692,6 +691,10 @@ msgstr "تسجيل خروج"
 #: .\templates\base.html:147
 msgid "Basket"
 msgstr "السلة"
+
+#: .\templates\base.html:175
+msgid "Search"
+msgstr "بحث"
 
 #: .\templates\basket\summary.html:4
 msgid "Basket Summary"
@@ -717,7 +720,6 @@ msgstr "عربة التسوق فارغة"
 
 #: .\templates\basket\summary.html:22
 #: .\templates\checkout\delivery_choices.html:28
-#| msgid "Extra Store"
 msgid "Store"
 msgstr "إكسترا ستور"
 
@@ -817,7 +819,6 @@ msgstr "أضف إلى القائمة"
 
 #: .\templates\checkout\delivery_address.html:4
 #: .\templates\checkout\delivery_address.html:9
-#| msgid "delivery price"
 msgid "Delivery Address"
 msgstr "عنوان التسليم"
 
@@ -830,38 +831,34 @@ msgid "There are no delivery addresses, "
 msgstr "لا توجد عناوين تسليم ،"
 
 #: .\templates\checkout\delivery_address.html:20
-#| msgid "Add Address"
 msgid "add address"
 msgstr "إضافة عنوان"
 
 #: .\templates\checkout\delivery_address.html:24
 #: .\templates\checkout\delivery_choices.html:32
 #: .\templates\checkout\payment_selection.html:21
-#| msgid "Sub Total: "
 msgid "Sub Total:"
 msgstr "المجموع الفرعي"
 
 #: .\templates\checkout\delivery_address.html:29
 #: .\templates\checkout\delivery_choices.html:37
 #: .\templates\checkout\payment_selection.html:26
-#| msgid "Delivery Options"
 msgid "Delivery Cost:"
 msgstr "تكلفة التوصيل"
 
 #: .\templates\checkout\delivery_address.html:34
 #: .\templates\checkout\delivery_choices.html:42
 #: .\templates\checkout\payment_selection.html:31
-#| msgid "Sub Total: "
 msgid "Total:"
 msgstr "المجموع"
 
 #: .\templates\checkout\delivery_address.html:38
 #: .\templates\checkout\delivery_choices.html:46
+#: .\templates\payment\payment_form.html:74
 msgid "Pay"
 msgstr "دفع"
 
 #: .\templates\checkout\delivery_address.html:43
-#| msgid "Your Addresses"
 msgid "Other Addresses"
 msgstr "عناوين أخرى"
 
@@ -874,12 +871,10 @@ msgid "Select"
 msgstr "تحديد"
 
 #: .\templates\checkout\delivery_choices.html:14
-#| msgid "Delivery Options"
 msgid "Select a delivery options"
 msgstr "حدد خيارات التسليم"
 
 #: .\templates\checkout\delivery_choices.html:28
-#| msgid "Delivery Options"
 msgid "There are no delivery options "
 msgstr "لا توجد خيارات توصيل"
 
@@ -897,7 +892,6 @@ msgid "Payment successful"
 msgstr "تم الدفع بنجاح"
 
 #: .\templates\checkout\payment_successful.html:12
-#| msgid "Basket Summary"
 msgid "Order Summary"
 msgstr "ملخص الطلب"
 
@@ -912,6 +906,112 @@ msgstr "خطأ في الطلب"
 #: .\templates\payment\error.html:10
 msgid "Please Contact our customer support team."
 msgstr "الرجاء التواصل مع فريق الدعم الفني."
+
+#: .\templates\payment\orderplaced.html:3
+msgid "Order Placed"
+msgstr "تم الطلب"
+
+#: .\templates\payment\orderplaced.html:9
+msgid "Order has been placed"
+msgstr "تم تقديم الطلب"
+
+#: .\templates\payment\orderplaced.html:10
+#| msgid "Check your email for instructions"
+msgid "Check your email for confirmation"
+msgstr "تحقق من بريدك الإلكتروني للتأكيد"
+
+#: .\templates\payment\orderplaced.html:11
+#, fuzzy
+#| msgid "orders"
+msgid "See orders"
+msgstr "الطلبات الخاصة بك "
+
+#: .\templates\payment\payment_form.html:4
+#: .\templates\payment\payment_form.html:68
+msgid "Payment"
+msgstr "دفع"
+
+#: .\templates\payment\payment_form.html:9
+#| msgid "email address"
+msgid "Billing address"
+msgstr "عنوان وصول الفواتير"
+
+#: .\templates\payment\payment_form.html:14
+#| msgid "Customer"
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#: .\templates\payment\payment_form.html:17
+msgid "Valid first name is required."
+msgstr "مطلوب اسم أول صالح."
+
+#: .\templates\payment\payment_form.html:21
+msgid "Email "
+msgstr "الايميل"
+
+#: .\templates\payment\payment_form.html:21
+#: .\templates\payment\payment_form.html:36
+msgid "(Optional)"
+msgstr "اختياري"
+
+#: .\templates\payment\payment_form.html:24
+msgid "Please enter a valid email address for shipping updates."
+msgstr "الرجاء إدخال عنوان بريد إلكتروني صالح لتحديثات الشحن."
+
+#: .\templates\payment\payment_form.html:28
+#| msgid "address"
+msgid "Address"
+msgstr "العنوان"
+
+#: .\templates\payment\payment_form.html:31
+#| msgid "Edit your shipping addresses"
+msgid "Please enter your shipping address."
+msgstr "يرجى إدخال عنوان الشحن الخاص بك."
+
+#: .\templates\payment\payment_form.html:35
+#| msgid "Address Line 1"
+msgid "Address 2 "
+msgstr "العنوان الثاني"
+
+#: .\templates\payment\payment_form.html:40
+msgid "Country"
+msgstr "الدولة"
+
+#: .\templates\payment\payment_form.html:42
+#: .\templates\payment\payment_form.html:52
+msgid "Choose..."
+msgstr "اختر..."
+
+#: .\templates\payment\payment_form.html:43
+#| msgid "Updated at"
+msgid "United States"
+msgstr "الولايات المتحدة"
+
+#: .\templates\payment\payment_form.html:46
+#| msgid "Please select your payment option"
+msgid "Please select a valid country."
+msgstr "الرجاء تحديد الدولة"
+
+#: .\templates\payment\payment_form.html:50
+msgid "State"
+msgstr "ولاية"
+
+#: .\templates\payment\payment_form.html:53
+msgid "California"
+msgstr "كاليفورنيا"
+
+#: .\templates\payment\payment_form.html:56
+msgid "Please provide a valid state."
+msgstr "يرجى تقديم ولاية"
+
+#: .\templates\payment\payment_form.html:63
+#| msgid "Not required"
+msgid "Zip code required."
+msgstr "الرمز البريدي مطلوب."
+
+#: .\templates\payment\payment_form.html:69
+msgid "Credit or debit card"
+msgstr "بطاقة الائتمان أو بطاقة الخصم"
 
 #: .\venv\Lib\site-packages\_pytest\config\argparsing.py:474
 #, python-format
@@ -1086,7 +1186,7 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\base.py:1420
 #: .\venv\Lib\site-packages\django\forms\models.py:899
 msgid "and"
-msgstr ""
+msgstr "و"
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1422
 #, python-format

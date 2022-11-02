@@ -150,14 +150,14 @@
                 <div class="d-md-none d-lg-none d-xl-none">
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li><a class="dropdown-item" href="{% url 'catalogue:catalogue_home' %}">All</a></li>
+                            <li><a class="dropdown-item" href="{% url 'catalogue:catalogue_home' %}">{% trans 'All' %}</a></li>
                             {% for c in categories %}
                             <li {% if category.slug == c.slug %}class="selected" {% endif %}>
                                 <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
                             </li>
                             {% endfor %}
                         </ul>
-                        <h6 class="card-title">My Account</h6>
+                        <h6 class="card-title">{% trans 'My Account' %}</h6>
                           <ul class="list-group list-group-flush dropdown-account-link">
                             {% if user.is_authenticated %}
                             <a href="{% url 'account:dashboard' %}" class="dropdown-item">{% trans 'Your Account' %}</a>
@@ -172,7 +172,7 @@
                 <form class="d-flex w-100 d-md-none">
                     <input class="form-control me-2" type="search" placeholder="Search products or FAQ"
                         aria-label="Search">
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary" type="submit">{% trans 'Search' %}</button>
                 </form>
             </div>
         </nav>
