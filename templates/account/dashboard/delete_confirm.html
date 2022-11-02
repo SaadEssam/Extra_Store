@@ -1,12 +1,13 @@
 {% extends '../sub_base.html' %}
-{% block title %}Delete Account{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Delete Account' %}{% endblock %}
 {% block sub_content %}
 
 
 <div class="container">
   <div>
-    <h3 class="mb-4">Delete Account</h3>
-    <p>You have now deleted your account</p>
+    <h3 class="mb-4">{% trans 'Delete Account' %}</h3>
+    <p>{% trans 'You have now deleted your account' %}</p>
   </div>
 </div>
 {% endblock %}

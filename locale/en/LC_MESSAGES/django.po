@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 14:15+0200\n"
+"POT-Creation-Date: 2022-11-02 15:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -269,6 +269,7 @@ msgid "arabic"
 msgstr ""
 
 #: .\templates\account\dashboard\addresses.html:3
+#: .\templates\account\dashboard\edit_addresses.html:3
 msgid "Edit Addresses"
 msgstr ""
 
@@ -288,11 +289,31 @@ msgid "addresses"
 msgstr ""
 
 #: .\templates\account\dashboard\addresses.html:8
+#: .\templates\account\dashboard\edit_addresses.html:8
 msgid "and delivery preferences"
 msgstr ""
 
 #: .\templates\account\dashboard\addresses.html:24
+#: .\templates\account\dashboard\edit_addresses.html:30
 msgid "Add Address"
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:46
+msgid "Phone number: "
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:48
+msgid "Edit"
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:50
+#: .\templates\account\dashboard\edit_details.html:41
+#: .\venv\Lib\site-packages\django\forms\formsets.py:496
+msgid "Delete"
+msgstr ""
+
+#: .\templates\account\dashboard\addresses.html:52
+msgid "Set Default"
 msgstr ""
 
 #: .\templates\account\dashboard\dashboard.html:3
@@ -342,6 +363,63 @@ msgstr ""
 
 #: .\templates\account\dashboard\dashboard.html:91
 msgid "View your Wishlist"
+msgstr ""
+
+#: .\templates\account\dashboard\delete_confirm.html:3
+#: .\templates\account\dashboard\delete_confirm.html:9
+#: .\templates\account\dashboard\edit_details.html:38
+msgid "Delete Account"
+msgstr ""
+
+#: .\templates\account\dashboard\delete_confirm.html:10
+msgid "You have now deleted your account"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_addresses.html:7
+msgid "Create/Edit Address"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_addresses.html:8
+msgid "Add a new delivery "
+msgstr ""
+
+#: .\templates\account\dashboard\edit_addresses.html:8
+msgid "address"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_addresses.html:13
+#: .\templates\account\dashboard\edit_details.html:23
+#: .\templates\account\password_reset\password_reset_confirm.html:19
+#: .\templates\account\password_reset\password_reset_form.html:18
+msgid "Error: Please try again!"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_details.html:4
+msgid "Edit Profile"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_details.html:11
+msgid "Details successfully updated!"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_details.html:14
+msgid "Back to Dashboard"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_details.html:17
+msgid "Change your details"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_details.html:18
+msgid "You can edit your accout using the following form:"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_details.html:33
+msgid "Save Changes"
+msgstr ""
+
+#: .\templates\account\dashboard\edit_details.html:39
+msgid "Are ypu sure you want to delete your account ?"
 msgstr ""
 
 #: .\templates\account\dashboard\user_orders.html:3
@@ -426,11 +504,6 @@ msgstr ""
 
 #: .\templates\account\password_reset\password_reset_confirm.html:16
 msgid "Use the form below to change your password."
-msgstr ""
-
-#: .\templates\account\password_reset\password_reset_confirm.html:19
-#: .\templates\account\password_reset\password_reset_form.html:18
-msgid "Error: Please try again!"
 msgstr ""
 
 #: .\templates\account\password_reset\password_reset_confirm.html:27
@@ -1232,10 +1305,6 @@ msgstr[1] ""
 #: .\venv\Lib\site-packages\django\forms\formsets.py:483
 #: .\venv\Lib\site-packages\django\forms\formsets.py:490
 msgid "Order"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\forms\formsets.py:496
-msgid "Delete"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:892

@@ -2,22 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 14:21+0200\n"
-"PO-Revision-Date: 2022-11-02 14:20+0000\n"
+"POT-Creation-Date: 2022-11-02 15:11+0200\n"
+"PO-Revision-Date: 2022-11-02 15:15+0000\n"
 "Last-Translator: Anonymous User <t@t.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\core\apps\account\models.py:19
@@ -271,6 +270,7 @@ msgid "arabic"
 msgstr "اللغة العربية"
 
 #: .\templates\account\dashboard\addresses.html:3
+#: .\templates\account\dashboard\edit_addresses.html:3
 msgid "Edit Addresses"
 msgstr "عناوينك"
 
@@ -290,12 +290,35 @@ msgid "addresses"
 msgstr "عناوينك "
 
 #: .\templates\account\dashboard\addresses.html:8
+#: .\templates\account\dashboard\edit_addresses.html:8
 msgid "and delivery preferences"
 msgstr "و معلومات التوصيل"
 
 #: .\templates\account\dashboard\addresses.html:24
+#: .\templates\account\dashboard\edit_addresses.html:30
 msgid "Add Address"
 msgstr "إضافة عنوان"
+
+#: .\templates\account\dashboard\addresses.html:46
+#, fuzzy
+#| msgid "Phone Number"
+msgid "Phone number: "
+msgstr "رقم الجوال"
+
+#: .\templates\account\dashboard\addresses.html:48
+msgid "Edit"
+msgstr "تعديل "
+
+#: .\templates\account\dashboard\addresses.html:50
+#: .\templates\account\dashboard\edit_details.html:41
+#: .\venv\Lib\site-packages\django\forms\formsets.py:496
+msgid "Delete"
+msgstr "حذف"
+
+#: .\templates\account\dashboard\addresses.html:52
+#| msgid "Default"
+msgid "Set Default"
+msgstr "تعيين كأساسي"
 
 #: .\templates\account\dashboard\dashboard.html:3
 #: .\templates\payment\error.html:11
@@ -345,6 +368,68 @@ msgstr "قائمتك"
 #: .\templates\account\dashboard\dashboard.html:91
 msgid "View your Wishlist"
 msgstr "عرض قائمتك"
+
+#: .\templates\account\dashboard\delete_confirm.html:3
+#: .\templates\account\dashboard\delete_confirm.html:9
+#: .\templates\account\dashboard\edit_details.html:38
+#| msgid "Register Account"
+msgid "Delete Account"
+msgstr "حذف الحساب"
+
+#: .\templates\account\dashboard\delete_confirm.html:10
+msgid "You have now deleted your account"
+msgstr "لقد قمت الآن بحذف حسابك"
+
+#: .\templates\account\dashboard\edit_addresses.html:7
+#| msgid "Edit Addresses"
+msgid "Create/Edit Address"
+msgstr "إضافة/ تعديل العنوان"
+
+#: .\templates\account\dashboard\edit_addresses.html:8
+msgid "Add a new delivery "
+msgstr "أضف تسليمًا جديدًا"
+
+#: .\templates\account\dashboard\edit_addresses.html:8
+#| msgid "addresses"
+msgid "address"
+msgstr "عنوان"
+
+#: .\templates\account\dashboard\edit_addresses.html:13
+#: .\templates\account\dashboard\edit_details.html:23
+#: .\templates\account\password_reset\password_reset_confirm.html:19
+#: .\templates\account\password_reset\password_reset_form.html:18
+msgid "Error: Please try again!"
+msgstr "خطأ: يرجى المحاولة مرة أخرى!"
+
+#: .\templates\account\dashboard\edit_details.html:4
+msgid "Edit Profile"
+msgstr "تعديل الحساب "
+
+#: .\templates\account\dashboard\edit_details.html:11
+msgid "Details successfully updated!"
+msgstr "تم تحديث التفاصيل بنجاح!"
+
+#: .\templates\account\dashboard\edit_details.html:14
+#| msgid "Dashboard"
+msgid "Back to Dashboard"
+msgstr "الرجوع إلى حسابك"
+
+#: .\templates\account\dashboard\edit_details.html:17
+#| msgid "Change your password"
+msgid "Change your details"
+msgstr "تغيير التفاصيل الخاصة بك"
+
+#: .\templates\account\dashboard\edit_details.html:18
+msgid "You can edit your accout using the following form:"
+msgstr "يمكنك تعديل حسابك باستخدام النموذج التالي:"
+
+#: .\templates\account\dashboard\edit_details.html:33
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: .\templates\account\dashboard\edit_details.html:39
+msgid "Are ypu sure you want to delete your account ?"
+msgstr "هل انت متأكد انك تريد حذف حسابك ؟"
 
 #: .\templates\account\dashboard\user_orders.html:3
 #: .\templates\account\dashboard\user_orders.html:8
@@ -431,11 +516,6 @@ msgstr "تغير كلمة المرور الخاصة بك"
 #: .\templates\account\password_reset\password_reset_confirm.html:16
 msgid "Use the form below to change your password."
 msgstr "استخدم النموذج أدناه لتغيير كلمة المرور الخاصة بك."
-
-#: .\templates\account\password_reset\password_reset_confirm.html:19
-#: .\templates\account\password_reset\password_reset_form.html:18
-msgid "Error: Please try again!"
-msgstr "خطأ: يرجى المحاولة مرة أخرى!"
 
 #: .\templates\account\password_reset\password_reset_confirm.html:27
 msgid "Your password can’t be too similar to your other personal information."
@@ -732,8 +812,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:264
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:276
@@ -929,15 +1009,15 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1458
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1466
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1471
@@ -956,8 +1036,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1754
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1758
@@ -1116,7 +1196,8 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:176
 msgid ":?.!"
 msgstr ""
@@ -1166,7 +1247,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:622
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -1244,10 +1326,6 @@ msgstr[1] ""
 msgid "Order"
 msgstr ""
 
-#: .\venv\Lib\site-packages\django\forms\formsets.py:496
-msgid "Delete"
-msgstr ""
-
 #: .\venv\Lib\site-packages\django\forms\models.py:892
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
@@ -1274,7 +1352,8 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1435
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1574
@@ -1734,11 +1813,11 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:136
@@ -1789,8 +1868,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
@@ -1846,10 +1925,10 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
