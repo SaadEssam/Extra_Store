@@ -1,18 +1,19 @@
 {% extends "../base.html" %}
+{% load i18n %}
 {% load static %}
-{% block title %}Payment successful{% endblock %}
+{% block title %}{% trans 'Payment successful' %}{% endblock %}
 {% block content %}
 
 <div class="container">
   <div class="col-12">
-    <h1 class="h2">Payment successful</h1>
+    <h1 class="h2">{% trans 'Payment successful' %}</h1>
   </div>
   <div class="col-12">
-    <p>Order Summary</p>
+    <p>{% trans 'Order Summary' %}</p>
   </div>
   <hr />
   <div class="col-12">
-    <p>View all <a href="{% url 'account:user_orders' %}"></a></p>
+    <p>{% trans 'View all ' %}<a href="{% url 'account:user_orders' %}"></a></p>
   </div>
 </div>
 

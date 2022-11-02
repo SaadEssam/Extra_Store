@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 15:23+0200\n"
+"POT-Creation-Date: 2022-11-02 15:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -245,6 +245,8 @@ msgid "Delivery Option"
 msgstr ""
 
 #: .\core\apps\checkout\models.py:26
+#: .\templates\checkout\delivery_choices.html:4
+#: .\templates\checkout\delivery_choices.html:11
 msgid "Delivery Options"
 msgstr ""
 
@@ -253,6 +255,8 @@ msgid "name"
 msgstr ""
 
 #: .\core\apps\checkout\models.py:36
+#: .\templates\checkout\payment_selection.html:4
+#: .\templates\checkout\payment_selection.html:9
 msgid "Payment Selection"
 msgstr ""
 
@@ -300,10 +304,12 @@ msgid "Add Address"
 msgstr ""
 
 #: .\templates\account\dashboard\addresses.html:46
+#: .\templates\checkout\delivery_address.html:61
 msgid "Phone number: "
 msgstr ""
 
 #: .\templates\account\dashboard\addresses.html:48
+#: .\templates\checkout\delivery_address.html:63
 msgid "Edit"
 msgstr ""
 
@@ -698,6 +704,7 @@ msgid "Your basket is empty "
 msgstr ""
 
 #: .\templates\basket\summary.html:22
+#: .\templates\checkout\delivery_choices.html:28
 msgid "Store"
 msgstr ""
 
@@ -793,6 +800,87 @@ msgstr ""
 
 #: .\templates\catalogue\single.html:48
 msgid "Add to Wishlist"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:4
+#: .\templates\checkout\delivery_address.html:9
+msgid "Delivery Address"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:12
+msgid "Please select your delivery address"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:20
+msgid "There are no delivery addresses, "
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:20
+msgid "add address"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:24
+#: .\templates\checkout\delivery_choices.html:32
+#: .\templates\checkout\payment_selection.html:21
+msgid "Sub Total:"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:29
+#: .\templates\checkout\delivery_choices.html:37
+#: .\templates\checkout\payment_selection.html:26
+msgid "Delivery Cost:"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:34
+#: .\templates\checkout\delivery_choices.html:42
+#: .\templates\checkout\payment_selection.html:31
+msgid "Total:"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:38
+#: .\templates\checkout\delivery_choices.html:46
+msgid "Pay"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:43
+msgid "Other Addresses"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:51
+msgid "Selected"
+msgstr ""
+
+#: .\templates\checkout\delivery_address.html:65
+msgid "Select"
+msgstr ""
+
+#: .\templates\checkout\delivery_choices.html:14
+msgid "Select a delivery options"
+msgstr ""
+
+#: .\templates\checkout\delivery_choices.html:28
+msgid "There are no delivery options "
+msgstr ""
+
+#: .\templates\checkout\delivery_choices.html:62
+msgid "Your order should be delivered within "
+msgstr ""
+
+#: .\templates\checkout\payment_selection.html:12
+msgid "Please select your payment option"
+msgstr ""
+
+#: .\templates\checkout\payment_successful.html:4
+#: .\templates\checkout\payment_successful.html:9
+msgid "Payment successful"
+msgstr ""
+
+#: .\templates\checkout\payment_successful.html:12
+msgid "Order Summary"
+msgstr ""
+
+#: .\templates\checkout\payment_successful.html:16
+msgid "View all "
 msgstr ""
 
 #: .\templates\payment\error.html:9

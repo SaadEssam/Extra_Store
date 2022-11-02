@@ -1,14 +1,15 @@
 {% extends "../base.html" %}
+{% load i18n %}
 {% load static %}
-{% block title %}Delivery Address{% endblock %}
+{% block title %}{% trans 'Delivery Address' %}{% endblock %}
 {% block content %}
 
 <div class="container">
   <div class="col-12">
-    <h1 class="h2">Delivery Address</h1>
+    <h1 class="h2">{% trans 'Delivery Address' %}</h1>
   </div>
   <div class="col-12">
-    <p>Please select your delivery address</p>
+    <p>{% trans 'Please select your delivery address' %}</p>
   </div>
   <hr />
 </div>
@@ -16,30 +17,30 @@
 <div class="container">
   <div class="row g-3">
     {% if addresses|length == 0 %}
-      <div class="col-12">There are no delivery addresses, <a href="{% url 'account:add_address' %}">add address</a></div>
+      <div class="col-12">{% trans 'There are no delivery addresses, ' %}<a href="{% url 'account:add_address' %}">{% trans 'add address' %}</a></div>
     {% else %}
       <div class="col-md-4 col-lg-4 order-md-last p-0 order-3">
         <div class="d-flex bd-highlight ms-0">
-          <div class="p-2 flex-grow-1 bd-highlight">Sub Total:</div>
+          <div class="p-2 flex-grow-1 bd-highlight">{% trans 'Sub Total:' %}</div>
           <div class="p-2 bd-highlight"><span class="fw-bold h5">$</span><span id="sub-total" 
             class="fw-bold h5">{{basket.get_subtotal_price}}</span></div>
         </div>
         <div class="d-flex bd-highlight">
-          <div class="p-2 flex-grow-1 bd-highlight">Delivery Cost:</div>
+          <div class="p-2 flex-grow-1 bd-highlight">{% trans 'Delivery Cost:' %}</div>
           <div class="p-2 bd-highlight"><span class="fw-bold h5">$</span><span id="delivery_price" 
             class="fw-bold h5">{{basket.get_delivery_price}}</span></div>
         </div>
         <div class="d-flex bd-highlight">
-          <div class="p-2 flex-grow-1 bd-highlight">Total:</div>
+          <div class="p-2 flex-grow-1 bd-highlight">{% trans 'Total:' %}</div>
           <div class="p-2 bd-highlight"><span class="fw-bold h5">$</span><span id="total" 
             class="fw-bold h5">{{basket.get_total_price}}</span></div>
         </div>
-        <a role="button" href="{% url 'checkout:payment_selection' %}" class="btn btn-success fw-bold w-100" type="button">Pay</a>
+        <a role="button" href="{% url 'checkout:payment_selection' %}" class="btn btn-success fw-bold w-100" type="button">{% trans 'Pay' %}</a>
       </div>
       <div class="col-md-7 col-lg-8">
         {% for address in addresses %}
           {% if not address.default %}
-          <h1 class="h5 pt-4">Other Addresses</h1>
+          <h1 class="h5 pt-4">{% trans 'Other Addresses' %}</h1>
           {% endif %}
       <div class="card mb-3 border-1 rounded-0 product-item me-md-4" data-index="{{option.id}}">
         <div class="row g-0">
@@ -47,7 +48,7 @@
             <div class="card pb-3 rounded-0">
               <div class="card-header bg-white small text-muted">
                 {% if address.default %}
-                  Selected
+                  {% trans 'Selected' %}
                 {% endif %}
                 &nbsp;
               </div>
@@ -57,11 +58,11 @@
                 <p class="card-text m-0">{{address.address_line2}}</p>
                 <p class="card-text m-0">{{address.town_city}}</p>
                 <p class="card-text m-0">{{address.postcode}}</p>
-                <p class="card-text m-0">Phone number: {{address.phone}}</p>
+                <p class="card-text m-0">{% trans 'Phone number: ' %}{{address.phone}}</p>
                 <div class="pt-5">
-                  <a href="{% url 'account:edit_address' address.id %}" class="text-decoration-none btn btn-outline-info btn-sm small">Edit</a>
+                  <a href="{% url 'account:edit_address' address.id %}" class="text-decoration-none btn btn-outline-info btn-sm small">{% trans 'Edit' %}</a>
                   {% if not address.default %}
-                  | <a href="{% url 'account:set_default' address.id %}" class="text-decoration-none btn btn-outline-success btn-sm small">Select</a>
+                  | <a href="{% url 'account:set_default' address.id %}" class="text-decoration-none btn btn-outline-success btn-sm small">{% trans 'Select' %}</a>
                   {% endif %}
                 </div>
               </div>

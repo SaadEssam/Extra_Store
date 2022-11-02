@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 15:23+0200\n"
-"PO-Revision-Date: 2022-11-02 15:27+0000\n"
+"POT-Creation-Date: 2022-11-02 15:35+0200\n"
+"PO-Revision-Date: 2022-11-02 15:41+0000\n"
 "Last-Translator: Anonymous User <t@t.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -231,11 +231,11 @@ msgstr "طريقة التوصيل"
 
 #: .\core\apps\checkout\models.py:19
 msgid "delivery time_frame"
-msgstr ""
+msgstr "موعد التسليم"
 
 #: .\core\apps\checkout\models.py:20
 msgid "delivery window"
-msgstr ""
+msgstr "مواعيد العمل"
 
 #: .\core\apps\checkout\models.py:21
 msgid "list order"
@@ -246,6 +246,8 @@ msgid "Delivery Option"
 msgstr "خيارات التوصيل"
 
 #: .\core\apps\checkout\models.py:26
+#: .\templates\checkout\delivery_choices.html:4
+#: .\templates\checkout\delivery_choices.html:11
 msgid "Delivery Options"
 msgstr "خيارات التوصيل"
 
@@ -254,6 +256,8 @@ msgid "name"
 msgstr "الاسم "
 
 #: .\core\apps\checkout\models.py:36
+#: .\templates\checkout\payment_selection.html:4
+#: .\templates\checkout\payment_selection.html:9
 msgid "Payment Selection"
 msgstr "اختيار طريقة الدفع"
 
@@ -301,12 +305,13 @@ msgid "Add Address"
 msgstr "إضافة عنوان"
 
 #: .\templates\account\dashboard\addresses.html:46
-#, fuzzy
+#: .\templates\checkout\delivery_address.html:61
 #| msgid "Phone Number"
 msgid "Phone number: "
 msgstr "رقم الجوال"
 
 #: .\templates\account\dashboard\addresses.html:48
+#: .\templates\checkout\delivery_address.html:63
 msgid "Edit"
 msgstr "تعديل "
 
@@ -689,12 +694,10 @@ msgid "Basket"
 msgstr "السلة"
 
 #: .\templates\basket\summary.html:4
-#| msgid "Basket"
 msgid "Basket Summary"
 msgstr "ملخص السلة"
 
 #: .\templates\basket\summary.html:11
-#| msgid "Basket"
 msgid "Your Basket"
 msgstr "السلة"
 
@@ -713,7 +716,7 @@ msgid "Your basket is empty "
 msgstr "عربة التسوق فارغة"
 
 #: .\templates\basket\summary.html:22
-#, fuzzy
+#: .\templates\checkout\delivery_choices.html:28
 #| msgid "Extra Store"
 msgid "Store"
 msgstr "إكسترا ستور"
@@ -729,7 +732,6 @@ msgid "Shipping options"
 msgstr "خيارات الشحن"
 
 #: .\templates\basket\summary.html:36
-#| msgid "Add a new delivery "
 msgid "Next day delivery"
 msgstr "التسليم في اليوم التالي"
 
@@ -738,7 +740,6 @@ msgid "Premium delivery"
 msgstr "توصيل بريميوم"
 
 #: .\templates\basket\summary.html:43
-#| msgid "Total paid: "
 msgid "Sub Total: "
 msgstr "المجموع الفرعي"
 
@@ -751,7 +752,6 @@ msgid "(Next day delivery)"
 msgstr "التسليم في اليوم التالي"
 
 #: .\templates\basket\summary.html:45
-#| msgid "Total paid: "
 msgid "Total to pay: "
 msgstr "مجموع الدفع:"
 
@@ -764,7 +764,6 @@ msgid "Save for later"
 msgstr "حفظ في وقت لاحق"
 
 #: .\templates\basket\summary.html:82
-#| msgid "Updated at"
 msgid "Update"
 msgstr "تعديل"
 
@@ -815,6 +814,96 @@ msgstr "شامل الضريبة"
 #: .\templates\catalogue\single.html:48
 msgid "Add to Wishlist"
 msgstr "أضف إلى القائمة"
+
+#: .\templates\checkout\delivery_address.html:4
+#: .\templates\checkout\delivery_address.html:9
+#| msgid "delivery price"
+msgid "Delivery Address"
+msgstr "عنوان التسليم"
+
+#: .\templates\checkout\delivery_address.html:12
+msgid "Please select your delivery address"
+msgstr "الرجاء تحديد عنوان التسليم الخاص بك"
+
+#: .\templates\checkout\delivery_address.html:20
+msgid "There are no delivery addresses, "
+msgstr "لا توجد عناوين تسليم ،"
+
+#: .\templates\checkout\delivery_address.html:20
+#| msgid "Add Address"
+msgid "add address"
+msgstr "إضافة عنوان"
+
+#: .\templates\checkout\delivery_address.html:24
+#: .\templates\checkout\delivery_choices.html:32
+#: .\templates\checkout\payment_selection.html:21
+#| msgid "Sub Total: "
+msgid "Sub Total:"
+msgstr "المجموع الفرعي"
+
+#: .\templates\checkout\delivery_address.html:29
+#: .\templates\checkout\delivery_choices.html:37
+#: .\templates\checkout\payment_selection.html:26
+#| msgid "Delivery Options"
+msgid "Delivery Cost:"
+msgstr "تكلفة التوصيل"
+
+#: .\templates\checkout\delivery_address.html:34
+#: .\templates\checkout\delivery_choices.html:42
+#: .\templates\checkout\payment_selection.html:31
+#| msgid "Sub Total: "
+msgid "Total:"
+msgstr "المجموع"
+
+#: .\templates\checkout\delivery_address.html:38
+#: .\templates\checkout\delivery_choices.html:46
+msgid "Pay"
+msgstr "دفع"
+
+#: .\templates\checkout\delivery_address.html:43
+#| msgid "Your Addresses"
+msgid "Other Addresses"
+msgstr "عناوين أخرى"
+
+#: .\templates\checkout\delivery_address.html:51
+msgid "Selected"
+msgstr "المحدد"
+
+#: .\templates\checkout\delivery_address.html:65
+msgid "Select"
+msgstr "تحديد"
+
+#: .\templates\checkout\delivery_choices.html:14
+#| msgid "Delivery Options"
+msgid "Select a delivery options"
+msgstr "حدد خيارات التسليم"
+
+#: .\templates\checkout\delivery_choices.html:28
+#| msgid "Delivery Options"
+msgid "There are no delivery options "
+msgstr "لا توجد خيارات توصيل"
+
+#: .\templates\checkout\delivery_choices.html:62
+msgid "Your order should be delivered within "
+msgstr "متوقع أن يتم تسليم طلبك في غضون"
+
+#: .\templates\checkout\payment_selection.html:12
+msgid "Please select your payment option"
+msgstr "الرجاء تحديد خيار الدفع الخاص بك"
+
+#: .\templates\checkout\payment_successful.html:4
+#: .\templates\checkout\payment_successful.html:9
+msgid "Payment successful"
+msgstr "تم الدفع بنجاح"
+
+#: .\templates\checkout\payment_successful.html:12
+#| msgid "Basket Summary"
+msgid "Order Summary"
+msgstr "ملخص الطلب"
+
+#: .\templates\checkout\payment_successful.html:16
+msgid "View all "
+msgstr "مشاهدة الكل"
 
 #: .\templates\payment\error.html:9
 msgid "Order Error"

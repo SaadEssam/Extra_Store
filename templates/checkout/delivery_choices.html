@@ -1,16 +1,17 @@
 {% extends "../base.html" %}
+{% load i18n %}
 {% load static %}
-{% block title %}Delivery Options{% endblock %}
+{% block title %}{% trans 'Delivery Options' %}{% endblock %}
 {% block content %}
 
 
 <main class="pt-5">
   <div class="container">
     <div class="col-12">
-      <h1 class="h2">Delivery Options</h1>
+      <h1 class="h2">{% trans 'Delivery Options' %}</h1>
     </div>
     <div class="col-12">
-      <p>Select a delivery options</p>
+      <p>{% trans 'Select a delivery options' %}</p>
     </div>
     <hr />
   </div>
@@ -24,25 +25,25 @@
     {% endif %}
     <div class="row g-3">
       {% if delivery_options|length == 0 %}
-        <div class="col-12">There are no delivery options <a href="{% url 'catalogue:catalogue_home' %}">Store</a></div>
+        <div class="col-12">{% trans 'There are no delivery options ' %}<a href="{% url 'catalogue:catalogue_home' %}">{% trans 'Store' %}</a></div>
       {% else %}
         <div class="col-md-5 col-lg-4 order-md-last p-0 order-3">
           <div class="d-flex bd-highlight ms-0">
-            <div class="p-2 flex-grow-1 bd-highlight">Sub Total:</div>
+            <div class="p-2 flex-grow-1 bd-highlight">{% trans 'Sub Total:' %}</div>
             <div class="p-2 bd-highlight"><span class="fw-bold h5">$</span><span id="sub-total" 
               class="fw-bold h5">{{basket.get_subtotal_price}}</span></div>
           </div>
           <div class="d-flex bd-highlight">
-            <div class="p-2 flex-grow-1 bd-highlight">Delivery Cost:</div>
+            <div class="p-2 flex-grow-1 bd-highlight">{% trans 'Delivery Cost:' %}</div>
             <div class="p-2 bd-highlight"><span class="fw-bold h5">$</span><span id="delivery_price" 
               class="fw-bold h5">{{basket.get_delivery_price}}</span></div>
           </div>
           <div class="d-flex bd-highlight">
-            <div class="p-2 flex-grow-1 bd-highlight">Total:</div>
+            <div class="p-2 flex-grow-1 bd-highlight">{% trans 'Total:' %}</div>
             <div class="p-2 bd-highlight"><span class="fw-bold h5">$</span><span id="total" 
               class="fw-bold h5">{{basket.get_total_price}}</span></div>
           </div>
-          <a role="button" href="{% url 'checkout:delivery_address' %}" class="btn btn-success fw-bold w-100" type="button">Pay</a>
+          <a role="button" href="{% url 'checkout:delivery_address' %}" class="btn btn-success fw-bold w-100" type="button">{% trans 'Pay' %}</a>
         </div>
         <div class="col-md-7 col-lg-8">
           {% for option in delivery_options %}
@@ -58,7 +59,7 @@
                 <div class="col-md-9 ps-md-1">
                   <div class="card-body p-1">
                     <p class="card-text ps-2 mb-1 pt-1 fw-bold">{{option.delivery_name}}</p>
-                    <p class="card-text ps-2 pb-3">Your order should be delivered within {{option.delivery_time_frame}}</p>
+                    <p class="card-text ps-2 pb-3">{% trans 'Your order should be delivered within ' %}{{option.delivery_time_frame}}</p>
                   </div>
                 </div>
                 <div class="col-md-1 ps-md-1">
